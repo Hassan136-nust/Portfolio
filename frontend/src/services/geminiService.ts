@@ -1,8 +1,6 @@
 import { profileData, projectsData } from '../data/resumeData';
 
-// Get API key from environment variable
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
+const API_URL = '/api/chat';
 
 // Create a comprehensive context about Hassan from the portfolio
 const createPortfolioContext = () => {
@@ -66,42 +64,32 @@ INSTRUCTIONS:
 export const sendMessageToGemini = async (userMessage: string): Promise<string> => {
   try {
     const portfolioContext = createPortfolioContext();
-    
-    const response = await fetch(GEMINI_API_URL, {
+    const fullMessage = `${portfolioContext}\n\nUser Question: ${userMessage}\n\nPlease answer this question based on Hassan's portfolio information above.`;
+
+    const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        contents: [
-          {
-            parts: [
-              {
-                text: `${portfolioContext}\n\nUser Question: ${userMessage}\n\nPlease answer this question based on Hassan's portfolio information above.`
-              }
-            ]
-          }
-        ],
-        generationConfig: {
-          temperature: 0.7,
-          maxOutputTokens: 2000,
-        }
+        message: fullMessage
       })
     });
 
     if (!response.ok) {
-      throw new Error(`API request failed: ${response.statusText}`);
+      const errorData = await response.json().catch(() => ({}));
+      throw new Error(errorData.error || `API request failed: ${response.statusText}`);
     }
 
     const data = await response.json();
     
-    if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
-      return data.candidates[0].content.parts[0].text;
+    if (data.success && data.message) {
+      return data.message;
     }
     
-    throw new Error('Invalid response format from Gemini API');
+    throw new Error(data.error || 'Invalid response format');
   } catch (error) {
-    console.error('Error calling Gemini API:', error);
+    console.error('Error calling API:', error);
     throw error;
   }
 };
