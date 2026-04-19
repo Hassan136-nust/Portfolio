@@ -2,7 +2,7 @@ export const profileData = {
   name: 'Hassan Jamal',
   title: 'BS Computer Science Student | Full-Stack & AI Enthusiast',
   email: 'hjamal.bscs24seecs@seecs.edu.pk',
-  phone: '0328-9082754',
+  phone: '+923289082754',
   location: 'Islamabad, Pakistan',
   bio: 'NUST Computer Science student building immersive web apps, scalable backend services, and AI-assisted systems. Experienced in React, Node.js, MongoDB, Docker, AWS, and real-time collaboration platforms.',
   profileImage: '/images/hassan.jpeg',
