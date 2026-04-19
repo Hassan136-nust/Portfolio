@@ -17,50 +17,47 @@ export default async function handler(req, res) {
     }
 
     // Get API key from environment
-    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-    if (!GEMINI_API_KEY) {
-      console.error('ERROR: GEMINI_API_KEY not set');
+    const GROQ_API_KEY = process.env.GROQ_API_KEY;
+    if (!GROQ_API_KEY) {
+      console.error('ERROR: GROQ_API_KEY not set');
       return res.status(500).json({ error: 'API key not configured' });
     }
 
-    // Call Gemini API
-    const geminiResponse = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`,
+    // Call Groq API
+    const groqResponse = await fetch(
+      'https://api.groq.com/openai/v1/chat/completions',
       {
         method: 'POST',
         headers: {
+          'Authorization': `Bearer ${GROQ_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          contents: [
+          model: 'llama3-8b-8192', // Fast model provided by Groq
+          messages: [
             {
-              parts: [
-                {
-                  text: message
-                }
-              ]
+              role: 'user',
+              content: message
             }
           ],
-          generationConfig: {
-            temperature: 0.7,
-            maxOutputTokens: 500,
-          }
+          temperature: 0.7,
+          max_tokens: 500,
         })
       }
     );
 
-    if (!geminiResponse.ok) {
-      const errorText = await geminiResponse.text();
-      console.error('Gemini API error:', geminiResponse.status, errorText);
+    if (!groqResponse.ok) {
+      const errorText = await groqResponse.text();
+      console.error('Groq API error:', groqResponse.status, errorText);
       return res.status(500).json({ error: `Failed to process request: ${errorText}` });
     }
 
-    const data = await geminiResponse.json();
+    const data = await groqResponse.json();
 
-    if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
+    if (data.choices && data.choices[0]?.message?.content) {
       return res.json({
         success: true,
-        message: data.candidates[0].content.parts[0].text
+        message: data.choices[0].message.content
       });
     }
 
