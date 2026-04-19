@@ -76,7 +76,7 @@ export const projectsData = [
     description: 'Multi-user collaborative editor with CRDT sync, Docker deployment, and AWS load-balanced infrastructure.',
     technologies: ['React', 'Socket.io', 'Docker', 'AWS'],
     image: '/images/code.png',
-    link: 'http://aws-lb-497400533.ap-northeast-1.elb.amazonaws.com/',
+    link: 'https://code-editor-live-jq2r.onrender.com',
     github: 'https://github.com/Hassan136-nust'
   },
 {
