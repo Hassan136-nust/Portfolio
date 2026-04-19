@@ -135,7 +135,7 @@ export default function App() {
       <footer className="bg-[#F5EFE6] border-t border-[#D4C4B0] text-[#111111] py-8 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-[#666666]">
-            &copy; {new Date().getFullYear()} {profileData.name}. Built with React, Three.js & Tailwind CSS.
+            &copy; {new Date().getFullYear()} {profileData.name}
           </p>
         </div>
       </footer>
