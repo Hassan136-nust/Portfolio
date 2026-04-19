@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Send, Download, CheckCircle, Mail, MessageCircle } from 'lucide-react';
 import { api } from '../../../services/api';
-import { generateAndDownloadResume } from '../../../utils/resumeGenerator';
 
 export const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -55,7 +54,13 @@ export const ContactSection = () => {
   };
 
   const handleDownloadResume = () => {
-    generateAndDownloadResume();
+    // Download the existing resume PDF
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Hassan_Jamal_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
