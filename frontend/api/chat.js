@@ -33,7 +33,7 @@ export default async function handler(req, res) {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          model: 'llama3-8b-8192', // Fast model provided by Groq
+          model: 'llama-3.1-8b-instant', // Fast model provided by Groq
           messages: [
             {
               role: 'user',
