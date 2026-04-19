@@ -262,6 +262,18 @@ export const generateAndDownloadResume = () => {
           </div>
 
           <div class="entry">
+  <div class="entry-header">
+    <div class="entry-title">Chess Arena - Real-Time Multiplayer Game</div>
+    <div class="entry-date">2024</div>
+  </div>
+  <div class="entry-subtitle">Docker + Render Deployment</div>
+  <ul>
+    <li>Built a real-time multiplayer chess game with live chat using WebSockets for instant move synchronization across devices</li>
+    <li>Containerized the application with Docker and deployed on Render, handling real-time connections and debugging production issues</li>
+  </ul>
+</div>
+
+          <div class="entry">
             <div class="entry-header">
               <div class="entry-title">Recommendation System with Graph Analysis</div>
             </div>

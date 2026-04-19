@@ -79,8 +79,18 @@ export const projectsData = [
     link: 'http://aws-lb-497400533.ap-northeast-1.elb.amazonaws.com/',
     github: 'https://github.com/Hassan136-nust'
   },
+{
+  id: 4,
+  title: 'Chess Arena - Real-Time Multiplayer Game',
+  description: 'Real-time multiplayer chess game with live chat, WebSocket sync, and containerized deployment on Render.',
+  technologies: ['Node.js', 'Express', 'Socket.io', 'Chess.js', 'Docker'],
+  image: '/images/chess.png',
+  link: 'https://chess-arena-game.onrender.com/',
+  github: 'https://github.com/Hassan136-nust/Online-Chess-Game.git'
+},
+
   {
-    id: 4,
+    id: 5,
     title: 'Recommendation System with Graph Analysis',
     description: 'Graph-based recommendation engine using network analysis for relationship-based suggestions.',
     technologies: ['Python', 'Graph Analysis', 'Machine Learning'],
@@ -89,7 +99,7 @@ export const projectsData = [
     github: 'https://github.com/muhammad-ahmad-amin/Link-Lab.git'
   },
   {
-    id: 5,
+    id: 6,
     title: 'Encrypted VPN with Login System',
     description: 'Secure VPN solution with encrypted communication and session-based authentication.',
     technologies: ['Java', 'Networking', 'Security'],
@@ -98,7 +108,7 @@ export const projectsData = [
     github: 'https://github.com/hassan-136/Nova-Link.git'
   },
   {
-    id: 6,
+    id: 7,
     title: 'Election Management System',
     description: 'JavaFX voting application with candidate management, animations, and persistent storage.',
     technologies: ['JavaFX', 'Java', 'UI Design'],
@@ -107,7 +117,7 @@ export const projectsData = [
     github: 'https://github.com/Hassan136-nust'
   },
   {
-    id: 7,
+    id: 8,
     title: 'Desktop E-Commerce Application',
     description: 'Developed a database-driven application with product, cart, and user management features.',
     technologies: ['Java', 'Database'],
@@ -116,7 +126,7 @@ export const projectsData = [
     github: 'https://github.com/Hassan136-nust'
   },
   {
-    id: 8,
+    id: 9,
     title: 'Adventure Game',
     description: 'Built a 2D game with physics, collision detection, and rendering pipeline.',
     technologies: ['C++', 'Raylib'],
