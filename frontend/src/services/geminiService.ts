@@ -1,6 +1,7 @@
 import { profileData, projectsData } from '../data/resumeData';
 
-const GEMINI_API_KEY = 'AIzaSyCIrB4aqzNFJF3VeVivPyBgpSYmd1PGsJY';
+// Get API key from environment variable
+const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
 
 // Create a comprehensive context about Hassan from the portfolio
