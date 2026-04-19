@@ -12,8 +12,8 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid message format' });
     }
 
-    if (message.length > 5000) {
-      return res.status(400).json({ error: 'Message too long (max 5000 characters)' });
+    if (message.length > 15000) {
+      return res.status(400).json({ error: 'Message too long (max 15000 characters)' });
     }
 
     // Get API key from environment
@@ -50,8 +50,9 @@ export default async function handler(req, res) {
     );
 
     if (!geminiResponse.ok) {
-      console.error('Gemini API error:', geminiResponse.status);
-      return res.status(500).json({ error: 'Failed to process request' });
+      const errorText = await geminiResponse.text();
+      console.error('Gemini API error:', geminiResponse.status, errorText);
+      return res.status(500).json({ error: `Failed to process request: ${errorText}` });
     }
 
     const data = await geminiResponse.json();
