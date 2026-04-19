@@ -1,217 +1,249 @@
-# 3D Scrollable Resume
+# Hassan's 3D Portfolio with AI Assistant
 
-A professional, production-ready 3D scrollable resume web application built with React, Three.js, and Tailwind CSS. Features smooth scroll-based 3D transitions, interactive elements, and a clean, minimalist design.
+A modern, interactive 3D portfolio website with an AI-powered chat assistant, built with React, Three.js, and Gemini API.
 
-## Features
+## 🌟 Features
 
-- **3D Interactive Elements**: Floating shapes and animations powered by Three.js and React Three Fiber
-- **Smooth Scroll Experience**: Seamless transitions between sections with parallax effects
-- **Dark/Light Mode**: Toggle between themes with smooth transitions
-- **Responsive Design**: Fully responsive across mobile, tablet, and desktop
-- **Modern UI**: Clean, professional design inspired by Apple/Stripe design language
-- **Accessible**: Keyboard navigation and proper contrast ratios
-- **Contact Form**: Interactive form with validation
-- **Resume Download**: Download resume as PDF
+- **3D Interactive Scene** - Beautiful 3D background with Three.js
+- **AI Chat Assistant** - Powered by Google Gemini API, trained on your portfolio
+- **Responsive Design** - Works seamlessly on desktop and mobile
+- **Professional Color Scheme** - Warm bronze and cream palette
+- **Resume Download** - Generate and download PDF resume
+- **Contact Integration** - Email and WhatsApp contact options
+- **Smooth Animations** - Framer Motion animations throughout
 
-## Tech Stack
+## 🔒 Security
+
+Your Gemini API key is **fully protected**:
+- ✅ API key stored only on backend server
+- ✅ Never exposed in frontend code or browser
+- ✅ CORS protection enabled
+- ✅ Rate limiting (10 requests/minute per IP)
+- ✅ Input validation (max 5000 characters)
+
+See [SECURITY.md](./SECURITY.md) for detailed security information.
+
+## 📁 Project Structure
+
+```
+├── frontend/                 # React + Vite (Deploy to Vercel)
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── components/
+│   │   │   │   ├── sections/     # Page sections
+│   │   │   │   ├── ui/           # UI components
+│   │   │   │   ├── 3d/           # 3D scene
+│   │   │   │   └── ChatAssistant.tsx
+│   │   │   └── App.tsx
+│   │   ├── services/
+│   │   │   ├── api.ts
+│   │   │   └── geminiService.ts  # Backend proxy client
+│   │   ├── styles/
+│   │   └── main.tsx
+│   ├── package.json
+│   ├── vite.config.ts
+│   └── .env.example
+├── backend/                  # Node.js Express (Deploy to Render)
+│   └── server/
+│       ├── index.js         # Secure API proxy
+│       ├── package.json
+│       └── .env.example
+├── SECURITY.md              # Security documentation
+├── SETUP_GUIDE.md           # Deployment guide
+└── SECURITY_CHECKLIST.md    # Pre/post deployment checklist
+```
+
+## 🚀 Quick Start
+
+### Local Development
+
+**Terminal 1 - Frontend:**
+```bash
+cd frontend
+npm install
+npm run dev
+# Opens at http://localhost:5173
+```
+
+**Terminal 2 - Backend:**
+```bash
+cd backend/server
+npm install
+GEMINI_API_KEY=your_key_here npm start
+# Runs at http://localhost:3000
+```
+
+### Using Docker
+
+```bash
+docker-compose up
+# Frontend: http://localhost:5173
+# Backend: http://localhost:3000
+```
+
+## 🌐 Deployment
+
+### Deploy to Vercel (Frontend)
+
+1. Go to [vercel.com](https://vercel.com)
+2. Import your GitHub repository
+3. Set Root Directory to `frontend`
+4. Add environment variable: `VITE_API_URL=https://your-backend.onrender.com`
+5. Deploy
+
+### Deploy to Render (Backend)
+
+1. Go to [render.com](https://render.com)
+2. Create new Web Service from GitHub
+3. Set Root Directory to `backend`
+4. Add environment variables:
+   ```
+   PORT=3000
+   NODE_ENV=production
+   FRONTEND_URL=https://your-frontend.vercel.app
+   GEMINI_API_KEY=your_actual_api_key_here
+   ```
+5. Deploy
+
+See [SETUP_GUIDE.md](./SETUP_GUIDE.md) for detailed instructions.
+
+## 🔐 Environment Variables
+
+### Frontend (.env)
+```
+VITE_API_URL=https://your-backend.onrender.com
+```
+
+### Backend (.env)
+```
+PORT=3000
+NODE_ENV=production
+FRONTEND_URL=https://your-frontend.vercel.app
+GEMINI_API_KEY=your_actual_gemini_api_key
+```
+
+**Important:** Never commit `.env` files to git. Use `.env.example` as a template.
+
+## 🛠️ Tech Stack
 
 ### Frontend
-- **React 18** - UI framework
-- **Vite** - Build tool and dev server
-- **TypeScript** - Type safety
-- **Tailwind CSS v4** - Styling
-- **Three.js** - 3D graphics
-- **React Three Fiber** - React renderer for Three.js
-- **@react-three/drei** - Useful helpers for R3F
-- **Framer Motion** - Animations
-- **Lucide React** - Icons
+- React 18.3.1
+- TypeScript
+- Vite
+- Tailwind CSS
+- Three.js (3D)
+- Framer Motion (Animations)
+- Lucide React (Icons)
+- Radix UI (Components)
 
-### Backend (Optional)
-- **Node.js** - Runtime
-- **Express** - API server
+### Backend
+- Node.js
+- Express.js
+- CORS
+- Rate Limiting
 
-## Project Structure
+### APIs
+- Google Gemini API (AI Chat)
 
+## 📚 Documentation
+
+- [SECURITY.md](./SECURITY.md) - Security implementation details
+- [SETUP_GUIDE.md](./SETUP_GUIDE.md) - Complete deployment guide
+- [SECURITY_CHECKLIST.md](./SECURITY_CHECKLIST.md) - Pre/post deployment checklist
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Deployment configuration
+
+## ✅ Pre-Deployment Checklist
+
+- [ ] `.env` files are in `.gitignore`
+- [ ] No API keys in source code
+- [ ] Backend proxy working locally
+- [ ] Frontend can reach backend
+- [ ] Chat functionality works
+- [ ] No API key in browser DevTools
+
+## ✅ Post-Deployment Checklist
+
+- [ ] Frontend loads at Vercel URL
+- [ ] Chat button appears and opens
+- [ ] Can send messages and receive responses
+- [ ] No API key visible in browser
+- [ ] Network tab shows backend calls only
+- [ ] Backend logs show successful requests
+- [ ] Rate limiting working
+- [ ] CORS working (no errors)
+
+## 🆘 Troubleshooting
+
+### Chat not working?
+1. Check `VITE_API_URL` environment variable
+2. Verify backend URL is correct
+3. Check browser console for errors
+4. Check Render logs for backend errors
+
+### API key exposed?
+1. Immediately revoke in Google Cloud Console
+2. Generate new API key
+3. Update Render environment variable
+4. Redeploy backend
+
+### CORS errors?
+1. Verify `FRONTEND_URL` in Render matches Vercel domain
+2. Check backend logs
+3. Ensure frontend URL includes protocol (https://)
+
+## 📊 API Endpoints
+
+### Backend API
+
+**Health Check**
 ```
-├── src/
-│   ├── app/
-│   │   ├── components/
-│   │   │   ├── 3d/
-│   │   │   │   ├── FloatingShape.tsx    # Animated 3D shapes
-│   │   │   │   └── Scene3D.tsx          # 3D canvas wrapper
-│   │   │   ├── sections/
-│   │   │   │   ├── HeroSection.tsx      # Landing section
-│   │   │   │   ├── AboutSection.tsx     # About me
-│   │   │   │   ├── SkillsSection.tsx    # Skills showcase
-│   │   │   │   ├── ProjectsSection.tsx  # Project cards
-│   │   │   │   ├── ExperienceSection.tsx # Timeline
-│   │   │   │   └── ContactSection.tsx   # Contact form
-│   │   │   └── Navigation.tsx           # Top navigation bar
-│   │   └── App.tsx                      # Main component
-│   ├── data/
-│   │   └── resumeData.ts                # Resume data
-│   ├── hooks/
-│   │   └── useScrollProgress.ts         # Scroll tracking hook
-│   ├── services/
-│   │   └── api.ts                       # API service layer
-│   └── styles/
-│       ├── theme.css                    # Theme tokens
-│       └── fonts.css                    # Font imports
-├── server/                              # Backend (optional)
-│   ├── data/
-│   │   ├── profile.json
-│   │   └── projects.json
-│   ├── index.js                         # Express server
-│   └── package.json
-└── package.json
-```
-
-## Getting Started
-
-### Prerequisites
-- Node.js 18 or higher
-- pnpm (recommended) or npm
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd 3d-resume
-```
-
-2. Install frontend dependencies:
-```bash
-pnpm install
-```
-
-3. Start the development server:
-```bash
-pnpm dev
-```
-
-The application will be available in the preview window.
-
-### Running the Backend (Optional)
-
-If you want to use the Express backend instead of mock data:
-
-1. Navigate to the server directory:
-```bash
-cd server
+GET /health
 ```
 
-2. Install server dependencies:
-```bash
-npm install
+**Chat Endpoint**
+```
+POST /api/chat
+Content-Type: application/json
+
+{
+  "message": "Your question here"
+}
+
+Response:
+{
+  "success": true,
+  "message": "AI response here"
+}
 ```
 
-3. Start the server:
-```bash
-npm start
-```
+## 🔄 How It Works
 
-The API will run on `http://localhost:3001`.
+1. **User sends message** → Frontend chat component
+2. **Frontend calls backend** → `/api/chat` endpoint
+3. **Backend validates** → Input validation & rate limiting
+4. **Backend calls Gemini** → With API key (secure)
+5. **Gemini responds** → Backend receives response
+6. **Backend returns** → Response to frontend
+7. **Frontend displays** → Message in chat UI
 
-## Customization
+**API key never leaves the backend server** ✅
 
-### Update Your Information
+## 📞 Support
 
-Edit `/src/data/resumeData.ts` to customize:
-- Personal information (name, title, bio)
-- Contact details
-- Social media links
-- Skills (frontend, backend, tools)
-- Work experience
-- Education
-- Projects
+For issues or questions:
+1. Check the relevant documentation file
+2. Review backend logs in Render dashboard
+3. Check browser console for errors
+4. Verify environment variables are set correctly
 
-### Customize Colors
+## 📄 License
 
-The color scheme uses a professional palette with:
-- Primary: Blue (`#4a90e2`)
-- Neutrals: Grays (`#6b7280`, `#9ca3af`)
-- Background: White/Charcoal
+This project is open source and available under the MIT License.
 
-To customize, edit the color values in:
-- `/src/styles/theme.css` - Theme tokens
-- Component files - Inline Tailwind classes
+## 🎉 Ready to Deploy!
 
-### Add More Sections
+Your portfolio is secure, scalable, and ready for production. Follow the [SETUP_GUIDE.md](./SETUP_GUIDE.md) for deployment instructions.
 
-1. Create a new component in `/src/app/components/sections/`
-2. Import and add it to `App.tsx`
-3. Update the `sections` array in `Navigation.tsx`
-4. Adjust scroll calculations in `useScrollProgress.ts`
+---
 
-## API Endpoints
-
-If using the backend server:
-
-- `GET /api/profile` - Returns profile information
-- `GET /api/projects` - Returns all projects
-- `POST /api/contact` - Handles contact form submissions
-
-## Performance Optimization
-
-The application is optimized for performance:
-- Lazy loading of 3D scenes with `Suspense`
-- Passive scroll listeners
-- Optimized re-renders with proper React hooks
-- Low-poly 3D models for faster rendering
-- Efficient CSS with Tailwind
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-WebGL support is required for 3D features.
-
-## Deployment
-
-### Build for Production
-
-```bash
-pnpm build
-```
-
-The production build will be in the `dist` folder.
-
-### Deploy Options
-
-- **Vercel**: Zero-config deployment for Vite apps
-- **Netlify**: Drag and drop or Git integration
-- **AWS S3 + CloudFront**: For full control
-- **GitHub Pages**: Free hosting for static sites
-
-## Accessibility
-
-- Keyboard navigation support
-- ARIA labels on interactive elements
-- Proper heading hierarchy
-- Color contrast meets WCAG AA standards
-- Reduced motion support (respects prefers-reduced-motion)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-MIT License - feel free to use this for your own portfolio!
-
-## Credits
-
-Built with ❤️ using:
-- [React](https://react.dev)
-- [Three.js](https://threejs.org)
-- [React Three Fiber](https://docs.pmnd.rs/react-three-fiber)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Framer Motion](https://www.framer.com/motion/)
+**Built with ❤️ for Hassan's Portfolio**

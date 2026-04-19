@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: hassan-portfolio-backend
+    env: node
+    plan: free
+    buildCommand: cd backend/server && npm install
+    startCommand: cd backend/server && npm start
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+      - key: FRONTEND_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
