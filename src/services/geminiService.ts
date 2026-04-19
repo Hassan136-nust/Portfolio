@@ -1,5 +1,7 @@
 import { profileData, projectsData } from '../data/resumeData';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+
 // Create a comprehensive context about Hassan from the portfolio
 const createPortfolioContext = () => {
   const context = `
@@ -64,35 +66,30 @@ export const sendMessageToGemini = async (userMessage: string): Promise<string> 
     const portfolioContext = createPortfolioContext();
     const fullMessage = `${portfolioContext}\n\nUser Question: ${userMessage}\n\nPlease answer this question based on Hassan's portfolio information above.`;
 
-    const API_KEY = 'AIzaSyCIrB4aqzNFJF3VeVivPyBgpSYmd1PGsJY';
-    const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
-
-    const response = await fetch(GEMINI_URL, {
+    const response = await fetch(`${API_URL}/api/chat`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        contents: [{
-          parts: [{ text: fullMessage }]
-        }]
+        message: fullMessage
       })
     });
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.error?.message || `API request failed: ${response.statusText}`);
+      throw new Error(errorData.error || `API request failed: ${response.statusText}`);
     }
 
     const data = await response.json();
     
-    if (data.candidates && data.candidates.length > 0 && data.candidates[0].content.parts.length > 0) {
-      return data.candidates[0].content.parts[0].text;
+    if (data.success && data.message) {
+      return data.message;
     }
     
-    throw new Error('Invalid response format from Gemini API');
+    throw new Error(data.error || 'Invalid response format');
   } catch (error) {
-    console.error('Error calling Gemini API:', error);
+    console.error('Error calling API:', error);
     throw error;
   }
 };
