@@ -42,7 +42,7 @@ Your Gemini API key is now **fully protected** from exposure. Here's how:
 
 1. **Environment Variables**
    ```
-   VITE_API_URL=https://your-railway-backend.app
+   VITE_API_URL=https://your-render-backend.onrender.com
    ```
    - Set in Vercel dashboard
    - Never commit to git
@@ -53,7 +53,7 @@ Your Gemini API key is now **fully protected** from exposure. Here's how:
    - Never put API keys in frontend code
    - All sensitive operations go through backend
 
-### For Railway (Backend)
+### For Render (Backend)
 
 1. **Environment Variables**
    ```
@@ -62,12 +62,12 @@ Your Gemini API key is now **fully protected** from exposure. Here's how:
    FRONTEND_URL=https://your-frontend.vercel.app
    GEMINI_API_KEY=your_actual_api_key_here
    ```
-   - Set in Railway dashboard
+   - Set in Render dashboard
    - Never commit to git
    - Only accessible on the server
 
 2. **API Key Management**
-   - Store in Railway secrets
+   - Store in Render environment variables
    - Rotate periodically
    - Monitor usage in Google Cloud Console
 
@@ -78,9 +78,9 @@ Your Gemini API key is now **fully protected** from exposure. Here's how:
 - [ ] Remove any hardcoded API keys from code
 - [ ] Create `.env` file with all secrets (don't commit)
 - [ ] Set environment variables in Vercel dashboard
-- [ ] Set environment variables in Railway dashboard
-- [ ] Update `FRONTEND_URL` in Railway to match your Vercel domain
-- [ ] Update `VITE_API_URL` in Vercel to match your Railway domain
+- [ ] Set environment variables in Render dashboard
+- [ ] Update `FRONTEND_URL` in Render to match your Vercel domain
+- [ ] Update `VITE_API_URL` in Vercel to match your Render domain
 
 ### After Deployment
 
@@ -99,7 +99,7 @@ User Browser
     ↓
 Frontend (Vercel) - No API key here
     ↓ (HTTPS)
-Backend (Railway) - API key stored here
+Backend (Render) - API key stored here
     ↓ (HTTPS)
 Gemini API
 ```
@@ -129,14 +129,14 @@ Gemini API
 ### Rotate API Key (Recommended Quarterly)
 
 1. Create new API key in Google Cloud Console
-2. Update Railway environment variable
+2. Update Render environment variable
 3. Test thoroughly
 4. Delete old API key
 5. Monitor for any issues
 
 ### Monitor Backend Logs
 
-**Railway Dashboard:**
+**Render Dashboard:**
 - View real-time logs
 - Check for errors
 - Monitor performance
@@ -160,13 +160,13 @@ npm start
 **Solution:** Adjust limit in `backend/server/index.js` line ~60
 
 ### Issue: CORS errors
-**Solution:** Verify `FRONTEND_URL` in Railway matches your Vercel domain exactly.
+**Solution:** Verify `FRONTEND_URL` in Render matches your Vercel domain exactly.
 
 ## Additional Security Measures (Optional)
 
 ### 1. API Key Rotation
 ```bash
-# In Railway dashboard, update GEMINI_API_KEY
+# In Render dashboard, update GEMINI_API_KEY
 # Redeploy automatically
 ```
 
@@ -188,7 +188,7 @@ If you have security concerns:
 1. Check this document first
 2. Review backend code in `backend/server/index.js`
 3. Check Google Cloud Console for API key usage
-4. Review Railway logs for errors
+4. Review Render logs for errors
 
 ## References
 
