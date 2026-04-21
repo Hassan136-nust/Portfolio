@@ -236,6 +236,19 @@ export const generateAndDownloadResume = () => {
             </ul>
           </div>
 
+
+            <div class="entry">
+  <div class="entry-header">
+    <div class="entry-title">Gapify AI - Resume & Interview Analyzer</div>
+    <div class="entry-date">2026</div>
+  </div>
+  <div class="entry-subtitle">Gen-AI + MERN Stack Deployment</div>
+  <ul>
+    <li>Built a full-stack MERN application that analyzes resumes and job descriptions using Gen-AI to generate match scores, skill gaps, and interview questions</li>
+    <li>Integrated Groq API for LLM-based insights and deployed frontend on Vercel and backend on Render with authentication and file handling</li>
+  </ul>
+</div>
+
           <div class="entry">
             <div class="entry-header">
               <div class="entry-title">UrbanPulse: GeoSpatial Urban Intelligence Platform</div>
