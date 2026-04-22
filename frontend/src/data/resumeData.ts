@@ -5,7 +5,7 @@ export const profileData = {
   phone: '+923289082754',
   location: 'Islamabad, Pakistan',
   bio: 'NUST Computer Science student building immersive web apps, scalable backend services, and AI-assisted systems. Experienced in React, Node.js, MongoDB, Docker, AWS, and real-time collaboration platforms.',
-  profileImage: '/images/hassan.jpeg',
+  profileImage: "https://avatars.githubusercontent.com/Hassan136-nust?size=400",
   social: {
     github: 'https://github.com/Hassan136-nust',
     linkedin: 'https://www.linkedin.com/in/hassan-jamal-a92191324/',
