@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Github } from "lucide-react";
 import { motion } from 'motion/react';
 import { Send, Download, CheckCircle, Mail, MessageCircle } from 'lucide-react';
 import { api } from '../../../services/api';
@@ -144,37 +145,57 @@ export const ContactSection = () => {
               />
             </div>
 
-            <div className="space-y-3">
-              <motion.button
-                type="submit"
-                disabled={isSubmitting || isSuccess}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full rounded-2xl bg-[#A67C52] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#8B6F47] disabled:bg-[#D4C4B0] disabled:text-[#666666] flex items-center justify-center gap-2"
-              >
-                {isSuccess ? (
-                  <>
-                    <CheckCircle className="w-5 h-5" /> Message Sent!
-                  </>
-                ) : (
-                  <>
-                    <Mail className="w-5 h-5" /> {isSubmitting ? 'Sending...' : 'Send via Email'}
-                  </>
-                )}
-              </motion.button>
+           <div className="space-y-3">
+  <motion.button
+    type="submit"
+    disabled={isSubmitting || isSuccess}
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    className="w-full rounded-2xl bg-[#A67C52] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#8B6F47] disabled:bg-[#D4C4B0] disabled:text-[#666666] flex items-center justify-center gap-2"
+  >
+    {isSuccess ? (
+      <>
+        <CheckCircle className="w-5 h-5" /> Message Sent!
+      </>
+    ) : (
+      <>
+        <Mail className="w-5 h-5" /> {isSubmitting ? 'Sending...' : 'Send via Email'}
+      </>
+    )}
+  </motion.button>
 
-              <motion.button
-                type="button"
-                onClick={handleWhatsApp}
-                disabled={isSubmitting || isSuccess}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full rounded-2xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20BA5A] disabled:bg-[#D4C4B0] disabled:text-[#666666] flex items-center justify-center gap-2"
-              >
-                <MessageCircle className="w-5 h-5" /> {isSubmitting ? 'Opening...' : 'Send via WhatsApp'}
-              </motion.button>
-            </div>
+  <motion.button
+    type="button"
+    onClick={handleWhatsApp}
+    disabled={isSubmitting || isSuccess}
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    className="w-full rounded-2xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20BA5A] disabled:bg-[#D4C4B0] disabled:text-[#666666] flex items-center justify-center gap-2"
+  >
+    <MessageCircle className="w-5 h-5" />
+    {isSubmitting ? 'Opening...' : 'Send via WhatsApp'}
+  </motion.button>
+
+  {/* ✅ GitHub Button (added below WhatsApp) */}
+  <motion.button
+    type="button"
+    onClick={() =>
+      window.open(
+        "https://github.com/Hassan136-nust",
+        "_blank",
+        "noopener,noreferrer"
+      )
+    }
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    className="w-full rounded-2xl bg-[#24292e] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#1b1f23] flex items-center justify-center gap-2"
+  >
+    <Github className="w-5 h-5" />
+    Visit GitHub
+  </motion.button>
+</div>
           </motion.form>
+          
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}

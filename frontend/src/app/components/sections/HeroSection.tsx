@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Github } from "lucide-react";
 import { Scene3D } from '../3d/Scene3D';
 import { ChevronDown, Download } from 'lucide-react';
 
@@ -71,12 +72,20 @@ export const HeroSection = ({ name, title, profileImage }: HeroSectionProps) => 
               >
                 Contact Me
               </button>
+       
               <button
                 onClick={() => window.scrollTo({ top: window.innerHeight * 3, behavior: 'smooth' })}
-                className="inline-flex items-center justify-center rounded-2xl border border-[#D4C4B0] bg-[#F5EFE6] px-8 py-3 text-sm font-semibold text-[#111111] transition hover:border-[#A67C52] hover:bg-[#E8DFD0]"
+                className="inline-flex items-center justify-center rounded-2xl border border-[#D4C4B0] bg-[#A67C52] px-8 py-3 text-sm font-semibold text-white transition hover:border-[#A67C52] hover:bg-[#8B6F47]"
               >
                 View Projects
               </button>
+   <button
+  onClick={() => window.open("https://github.com/Hassan136-nust", "_blank")}
+  className="inline-flex items-center justify-center rounded-2xl bg-[#A67C52] px-8 py-3 text-sm font-semibold text-white transition hover:bg-[#8B6F47] gap-2"
+>
+  <Github className="w-4 h-4" />
+  GitHub
+</button>
               {/* <a
                 href="/resume.pdf"
                 download="Hassan_Jamal_Resume.pdf"
