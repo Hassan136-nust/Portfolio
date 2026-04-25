@@ -58,8 +58,8 @@ export const projectsData = [
     description: 'Research project focused on SemEval-2026 Task 3 using NLP models and deep learning for sentiment extraction.',
     technologies: ['Python', 'NLP', 'Deep Learning', 'Data Engineering'],
     image: '/images/asp.png',
-    link: 'https://github.com/muhammad-ahmad-amin/ParselQ.git',
-    github: 'https://github.com/muhammad-ahmad-amin/ParselQ.git'
+    link: 'https://github.com/Hassan136-nust/-Dimensional-Aspect-Based-Sentiment-Analysis.git',
+    github: 'https://github.com/Hassan136-nust/-Dimensional-Aspect-Based-Sentiment-Analysis.git'
   },
 
 {
@@ -106,8 +106,8 @@ export const projectsData = [
     description: 'Graph-based recommendation engine using network analysis for relationship-based suggestions.',
     technologies: ['Python', 'Graph Analysis', 'Machine Learning'],
     image: '/images/dsa.png',
-    link: 'https://github.com/muhammad-ahmad-amin/Link-Lab.git',
-    github: 'https://github.com/muhammad-ahmad-amin/Link-Lab.git'
+    link: 'https://github.com/Hassan136-nust/Recommendation-System.git',
+    github: 'https://github.com/Hassan136-nust/Recommendation-System.git'
   },
   {
     id: 7,
