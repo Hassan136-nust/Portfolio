@@ -50,7 +50,7 @@ export const HeroSection = ({ name, title, profileImage }: HeroSectionProps) => 
               transition={{ duration: 0.9, delay: 0.4 }}
               className="mt-10 flex flex-wrap gap-3"
             >
-              {['React.js', 'Node.js', 'MongoDB', 'AWS', 'Docker', 'AI'].map((tag) => (
+              {['React.js', 'Node.js', 'MongoDB', 'AWS', 'Docker', 'AI','Gen-AI','WebContainer'].map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full border border-[#D4C4B0] bg-[#F5EFE6] px-4 py-2 text-sm text-[#111111] shadow-sm"

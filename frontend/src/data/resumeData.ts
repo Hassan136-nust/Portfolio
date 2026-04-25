@@ -15,7 +15,7 @@ export const profileData = {
     languages: ['Python', 'C++', 'Java', 'JavaScript', 'PL/SQL'],
     frontend: ['React.js', 'HTML', 'CSS', 'Tailwind CSS', 'Bootstrap'],
     backend: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'JWT Authentication', 'MVC Architecture'],
-    tools: ['Docker', 'AWS','Web Container', 'Cursor', 'Antigravity', 'GitHub Copilot', 'Kiro', 'Lovable', 'Figma', 'Nginx(Basic)', 'Git', 'VS Code', 'PyCharm', 'Postman']
+    tools: ['Docker', 'AWS','Web Container', 'Cursor','Gen-AI', 'Antigravity', 'GitHub Copilot', 'Kiro', 'Lovable', 'Figma', 'Nginx(Basic)', 'Git', 'VS Code', 'PyCharm', 'Postman']
   },
   experience: [
     {
