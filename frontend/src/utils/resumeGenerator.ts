@@ -225,6 +225,18 @@ export const generateAndDownloadResume = () => {
           <div class="section-title">Experience & Projects</div>
           
           <div class="entry">
+  <div class="entry-header">
+    <div class="entry-title">FREYA – AI-Powered Collaborative Code Editor</div>
+    <div class="entry-date">2026</div>
+  </div>
+  <div class="entry-subtitle">Gen-AI + MERN + WebContainers</div>
+  <ul>
+    <li>Built a real-time multi-user collaborative development environment with live code editing, file synchronization, and in-browser execution using WebContainer API</li>
+    <li>Integrated Groq LLM for AI-powered code generation via @freya, with automatic code-to-file conversion and backend architecture (Socket.io, JWT, Redis) implemented from scratch</li>
+  </ul>
+</div>
+
+          <div class="entry">
             <div class="entry-header">
               <div class="entry-title">Dimensional Aspect-Based Sentiment Analysis</div>
               <div class="entry-date">2026</div>

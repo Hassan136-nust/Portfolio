@@ -15,7 +15,7 @@ export const profileData = {
     languages: ['Python', 'C++', 'Java', 'JavaScript', 'PL/SQL'],
     frontend: ['React.js', 'HTML', 'CSS', 'Tailwind CSS', 'Bootstrap'],
     backend: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'JWT Authentication', 'MVC Architecture'],
-    tools: ['Docker', 'AWS', 'Cursor', 'Antigravity', 'GitHub Copilot', 'Kiro', 'Lovable', 'Figma', 'Nginx(Basic)', 'Git', 'VS Code', 'PyCharm', 'Postman']
+    tools: ['Docker', 'AWS','Web Container', 'Cursor', 'Antigravity', 'GitHub Copilot', 'Kiro', 'Lovable', 'Figma', 'Nginx(Basic)', 'Git', 'VS Code', 'PyCharm', 'Postman']
   },
   experience: [
     {
@@ -53,7 +53,16 @@ export const profileData = {
 
 export const projectsData = [
   {
-    id: 1,
+  id: 1,
+  title: 'FREYA : AI-Powered Collaborative Code Editor',
+  description: 'Gen-AI powered collaborative development environment with real-time multi-user editing, in-browser code execution using WebContainers, and AI-assisted code generation via @freya.',
+  technologies: ['Gen-AI','React', 'Node.js', 'MongoDB', 'Socket.io', 'WebContainer API', 'Groq API', 'Redis', 'JWT'],
+  image: '/images/freya.png',
+  link: 'https://freya-agent.vercel.app/',
+  github: 'https://github.com/Hassan136-nust/FREYA'
+},
+  {
+    id: 2,
     title: 'Dimensional Aspect-Based Sentiment Analysis',
     description: 'Research project focused on SemEval-2026 Task 3 using NLP models and deep learning for sentiment extraction.',
     technologies: ['Python', 'NLP', 'Deep Learning', 'Data Engineering'],
@@ -63,7 +72,7 @@ export const projectsData = [
   },
 
 {
-  id: 2,
+  id: 3,
   title: 'Gapify AI - Resume & Interview Analyzer',
   description: 'Gen-AI powered MERN app that analyzes resumes, detects skill gaps, generates interview questions, and provides a preparation roadmap.',
   technologies: ['Gen-AI','React', 'Node.js', 'MongoDB', 'Groq API', 'JWT'],
@@ -73,7 +82,7 @@ export const projectsData = [
 },
 
   {
-    id: 3,
+    id: 4,
     title: 'UrbanPulse: GeoSpatial Urban Intelligence',
     description: 'MERN stack platform for urban planning analytics using OpenStreetMap and spatial data processing.',
     technologies: ['React', 'Node.js', 'MongoDB', 'OpenStreetMap'],
@@ -82,7 +91,7 @@ export const projectsData = [
     github: 'https://github.com/Hassan136-nust/Geo-Spatial-Database-for-Urban-Planning-.git'
   },
   {
-    id: 4,
+    id: 5,
     title: 'Real-Time Collaborative Code Editor',
     description: 'Multi-user collaborative editor with CRDT sync, Docker deployment, and AWS load-balanced infrastructure.',
     technologies: ['React', 'Socket.io', 'Docker', 'AWS'],
@@ -91,7 +100,7 @@ export const projectsData = [
     github: 'https://github.com/Hassan136-nust'
   },
 {
-  id: 5,
+  id: 6,
   title: 'Chess Arena - Real-Time Multiplayer Game',
   description: 'Real-time multiplayer chess game with live chat, WebSocket sync, and containerized deployment on Render.',
   technologies: ['Node.js', 'Express', 'Socket.io', 'Chess.js', 'Docker'],
@@ -101,7 +110,7 @@ export const projectsData = [
 },
 
   {
-    id: 6,
+    id: 7,
     title: 'Recommendation System with Graph Analysis',
     description: 'Graph-based recommendation engine using network analysis for relationship-based suggestions.',
     technologies: ['Python', 'Graph Analysis', 'Machine Learning'],
@@ -110,7 +119,7 @@ export const projectsData = [
     github: 'https://github.com/Hassan136-nust/Recommendation-System.git'
   },
   {
-    id: 7,
+    id: 8,
     title: 'Encrypted VPN with Login System',
     description: 'Secure VPN solution with encrypted communication and session-based authentication.',
     technologies: ['Java', 'Networking', 'Security'],
@@ -119,7 +128,7 @@ export const projectsData = [
     github: 'https://github.com/hassan-136/Nova-Link.git'
   },
   {
-    id: 8,
+    id: 9,
     title: 'Election Management System',
     description: 'JavaFX voting application with candidate management, animations, and persistent storage.',
     technologies: ['JavaFX', 'Java', 'UI Design'],
@@ -128,7 +137,7 @@ export const projectsData = [
     github: 'https://github.com/Hassan136-nust'
   },
   {
-    id: 9,
+    id: 10,
     title: 'Desktop E-Commerce Application',
     description: 'Developed a database-driven application with product, cart, and user management features.',
     technologies: ['Java', 'Database'],
@@ -137,7 +146,7 @@ export const projectsData = [
     github: 'https://github.com/Hassan136-nust'
   },
   {
-    id: 10,
+    id: 11,
     title: 'Adventure Game',
     description: 'Built a 2D game with physics, collision detection, and rendering pipeline.',
     technologies: ['C++', 'Raylib'],
