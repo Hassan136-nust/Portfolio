@@ -1,249 +1,200 @@
-# Hassan's 3D Portfolio with AI Assistant
+# 🚀 Hassan Jamal - Portfolio
 
-A modern, interactive 3D portfolio website with an AI-powered chat assistant, built with React, Three.js, and Gemini API.
+A modern, interactive 3D portfolio website showcasing my projects, skills, and experience as a Computer Science student at NUST.
 
-## 🌟 Features
-
-- **3D Interactive Scene** - Beautiful 3D background with Three.js
-- **AI Chat Assistant** - Powered by Google Gemini API, trained on your portfolio
-- **Responsive Design** - Works seamlessly on desktop and mobile
-- **Professional Color Scheme** - Warm bronze and cream palette
-- **Resume Download** - Generate and download PDF resume
-- **Contact Integration** - Email and WhatsApp contact options
-- **Smooth Animations** - Framer Motion animations throughout
-
-## 🔒 Security
-
-Your Gemini API key is **fully protected**:
-- ✅ API key stored only on backend server
-- ✅ Never exposed in frontend code or browser
-- ✅ CORS protection enabled
-- ✅ Rate limiting (10 requests/minute per IP)
-- ✅ Input validation (max 5000 characters)
-
-See [SECURITY.md](./SECURITY.md) for detailed security information.
-
-## 📁 Project Structure
-
-```
-├── frontend/                 # React + Vite (Deploy to Vercel)
-│   ├── src/
-│   │   ├── app/
-│   │   │   ├── components/
-│   │   │   │   ├── sections/     # Page sections
-│   │   │   │   ├── ui/           # UI components
-│   │   │   │   ├── 3d/           # 3D scene
-│   │   │   │   └── ChatAssistant.tsx
-│   │   │   └── App.tsx
-│   │   ├── services/
-│   │   │   ├── api.ts
-│   │   │   └── geminiService.ts  # Backend proxy client
-│   │   ├── styles/
-│   │   └── main.tsx
-│   ├── package.json
-│   ├── vite.config.ts
-│   └── .env.example
-├── backend/                  # Node.js Express (Deploy to Render)
-│   └── server/
-│       ├── index.js         # Secure API proxy
-│       ├── package.json
-│       └── .env.example
-├── SECURITY.md              # Security documentation
-├── SETUP_GUIDE.md           # Deployment guide
-└── SECURITY_CHECKLIST.md    # Pre/post deployment checklist
-```
-
-## 🚀 Quick Start
-
-### Local Development
-
-**Terminal 1 - Frontend:**
-```bash
-cd frontend
-npm install
-npm run dev
-# Opens at http://localhost:5173
-```
-
-**Terminal 2 - Backend:**
-```bash
-cd backend/server
-npm install
-GEMINI_API_KEY=your_key_here npm start
-# Runs at http://localhost:3000
-```
-
-### Using Docker
-
-```bash
-docker-compose up
-# Frontend: http://localhost:5173
-# Backend: http://localhost:3000
-```
-
-## 🌐 Deployment
-
-### Deploy to Vercel (Frontend)
-
-1. Go to [vercel.com](https://vercel.com)
-2. Import your GitHub repository
-3. Set Root Directory to `frontend`
-4. Add environment variable: `VITE_API_URL=https://your-backend.onrender.com`
-5. Deploy
-
-### Deploy to Render (Backend)
-
-1. Go to [render.com](https://render.com)
-2. Create new Web Service from GitHub
-3. Set Root Directory to `backend`
-4. Add environment variables:
-   ```
-   PORT=3000
-   NODE_ENV=production
-   FRONTEND_URL=https://your-frontend.vercel.app
-   GEMINI_API_KEY=your_actual_api_key_here
-   ```
-5. Deploy
-
-See [SETUP_GUIDE.md](./SETUP_GUIDE.md) for detailed instructions.
-
-## 🔐 Environment Variables
-
-### Frontend (.env)
-```
-VITE_API_URL=https://your-backend.onrender.com
-```
-
-### Backend (.env)
-```
-PORT=3000
-NODE_ENV=production
-FRONTEND_URL=https://your-frontend.vercel.app
-GEMINI_API_KEY=your_actual_gemini_api_key
-```
-
-**Important:** Never commit `.env` files to git. Use `.env.example` as a template.
-
-## 🛠️ Tech Stack
-
-### Frontend
-- React 18.3.1
-- TypeScript
-- Vite
-- Tailwind CSS
-- Three.js (3D)
-- Framer Motion (Animations)
-- Lucide React (Icons)
-- Radix UI (Components)
-
-### Backend
-- Node.js
-- Express.js
-- CORS
-- Rate Limiting
-
-### APIs
-- Google Gemini API (AI Chat)
-
-## 📚 Documentation
-
-- [SECURITY.md](./SECURITY.md) - Security implementation details
-- [SETUP_GUIDE.md](./SETUP_GUIDE.md) - Complete deployment guide
-- [SECURITY_CHECKLIST.md](./SECURITY_CHECKLIST.md) - Pre/post deployment checklist
-- [DEPLOYMENT.md](./DEPLOYMENT.md) - Deployment configuration
-
-## ✅ Pre-Deployment Checklist
-
-- [ ] `.env` files are in `.gitignore`
-- [ ] No API keys in source code
-- [ ] Backend proxy working locally
-- [ ] Frontend can reach backend
-- [ ] Chat functionality works
-- [ ] No API key in browser DevTools
-
-## ✅ Post-Deployment Checklist
-
-- [ ] Frontend loads at Vercel URL
-- [ ] Chat button appears and opens
-- [ ] Can send messages and receive responses
-- [ ] No API key visible in browser
-- [ ] Network tab shows backend calls only
-- [ ] Backend logs show successful requests
-- [ ] Rate limiting working
-- [ ] CORS working (no errors)
-
-## 🆘 Troubleshooting
-
-### Chat not working?
-1. Check `VITE_API_URL` environment variable
-2. Verify backend URL is correct
-3. Check browser console for errors
-4. Check Render logs for backend errors
-
-### API key exposed?
-1. Immediately revoke in Google Cloud Console
-2. Generate new API key
-3. Update Render environment variable
-4. Redeploy backend
-
-### CORS errors?
-1. Verify `FRONTEND_URL` in Render matches Vercel domain
-2. Check backend logs
-3. Ensure frontend URL includes protocol (https://)
-
-## 📊 API Endpoints
-
-### Backend API
-
-**Health Check**
-```
-GET /health
-```
-
-**Chat Endpoint**
-```
-POST /api/chat
-Content-Type: application/json
-
-{
-  "message": "Your question here"
-}
-
-Response:
-{
-  "success": true,
-  "message": "AI response here"
-}
-```
-
-## 🔄 How It Works
-
-1. **User sends message** → Frontend chat component
-2. **Frontend calls backend** → `/api/chat` endpoint
-3. **Backend validates** → Input validation & rate limiting
-4. **Backend calls Gemini** → With API key (secure)
-5. **Gemini responds** → Backend receives response
-6. **Backend returns** → Response to frontend
-7. **Frontend displays** → Message in chat UI
-
-**API key never leaves the backend server** ✅
-
-## 📞 Support
-
-For issues or questions:
-1. Check the relevant documentation file
-2. Review backend logs in Render dashboard
-3. Check browser console for errors
-4. Verify environment variables are set correctly
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🎉 Ready to Deploy!
-
-Your portfolio is secure, scalable, and ready for production. Follow the [SETUP_GUIDE.md](./SETUP_GUIDE.md) for deployment instructions.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://hassan-jamal-portfolio.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/your-profile)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-black)](https://github.com/Hassan136-nust)
 
 ---
 
-**Built with ❤️ for Hassan's Portfolio**
+## 👨‍💻 About Me
+
+**Hassan Jamal**  
+BS Computer Science Student | 4th Semester   
+National University of Sciences and Technology (NUST)
+
+📧 hjamal.bscs24seecs@seecs.edu.pk  
+📱 0328-9082754  
+🔗 [LinkedIn](https://linkedin.com) | [Portfolio](https://hassan-jamal-portfolio.vercel.app) | [GitHub](https://github.com/Hassan136-nust)
+
+---
+
+## 🎯 What I Do
+
+- **Full-Stack Development:** MERN Stack, REST APIs, Real-Time Systems
+- **AI Integration:** Gen-AI/LLM (Groq, Gemini), AI-Powered Applications
+- **Cloud & DevOps:** Docker, AWS (ECR, ECS, ALB), Nginx
+- **Real-Time Systems:** WebSockets, Socket.IO, CRDTs
+- **Collaborative Tools:** Multi-user code editors, real-time synchronization
+
+---
+
+## 🛠️ Tech Stack
+
+### Languages
+Python • C++ • Java • JavaScript • PL/SQL
+
+### Frontend
+React.js • HTML • CSS • Tailwind CSS • Bootstrap • Three.js
+
+### Backend
+Node.js • Express.js • MongoDB • REST APIs • JWT • WebSockets • Socket.IO
+
+### Cloud & DevOps
+Docker • AWS (ECR, ECS, ALB) • Nginx • Vercel • Render
+
+### AI & Tools
+Groq • Gemini • Git • GitHub • VS Code • Postman • Figma
+
+---
+
+## 🚀 Featured Projects
+
+### 🤖 FREYA - AI-Powered Collaborative Code Editor
+**Tech:** Gen-AI + MERN + WebContainers + Socket.IO  
+**[Live Demo](https://freya-demo.vercel.app)** | **[GitHub](https://github.com/Hassan136-nust)**
+
+- Real-time multi-user code editor with AI-powered code generation
+- Integrated Groq LLM for intelligent code modification
+- Browser-based Node.js runtime using WebContainer API
+- Live synchronization across multiple users
+
+### 🌆 UrbanPulse - GeoSpatial Urban Intelligence Platform
+**Tech:** MERN Stack + OpenStreetMap + Overpass API  
+**[GitHub](https://github.com/Hassan136-nust)**
+
+- Geospatial analysis system for urban data processing
+- Infrastructure scoring and route analysis modules
+- Real-time spatial data visualization
+
+### 📄 Gapify AI - Resume & Interview Analyzer
+**Tech:** Gen-AI + MERN Stack + Groq LLM  
+**[Live Demo](https://gapify-demo.vercel.app)** | **[GitHub](https://github.com/Hassan136-nust)**
+
+- AI-powered resume analysis with skill gap detection
+- Automated interview question generation
+- Match scoring between resumes and job descriptions
+
+### ♟️ Chess Arena - Real-Time Multiplayer Game
+**Tech:** Socket.IO + Docker + Render  
+**[Live Demo](https://chess-arena.onrender.com)** | **[GitHub](https://github.com/Hassan136-nust)**
+
+- Real-time multiplayer chess with live chat
+- WebSocket-based instant synchronization
+- Containerized deployment on Render
+
+### 💻 Real-Time Collaborative Code Editor
+**Tech:** CRDTs + WebSockets + Docker + AWS  
+**[Live Demo](https://code-editor-aws.com)** | **[GitHub](https://github.com/Hassan136-nust)**
+
+- Multi-user code editor with live cursor synchronization
+- CRDT-based conflict resolution
+- Deployed on AWS (ECR, ECS, ALB)
+
+### 🔒 Encrypted VPN with Login System
+**Tech:** Python + Custom Network Architecture  
+**[GitHub](https://github.com/Hassan136-nust)**
+
+- Secure VPN with encrypted client-server communication
+- Session management and authentication
+- Low-level packet handling
+
+---
+
+## 📊 Core Competencies
+
+- **Data Structures & Algorithms**
+- **Object-Oriented Programming**
+- **Database Systems**
+- **Computer Networks**
+- **Real-Time Systems**
+- **REST API Design**
+- **Cloud Architecture**
+
+---
+
+## 🎨 Portfolio Features
+
+This portfolio website includes:
+
+- ✨ **3D Interactive Scene** - Three.js powered animations
+- 🤖 **AI Chat Assistant** - Powered by Google Gemini API
+- 📱 **Fully Responsive** - Works on all devices
+- 🎨 **Modern Design** - Warm bronze & cream color scheme
+- 📄 **Resume Download** - One-click PDF download
+- 📧 **Contact Integration** - Email & WhatsApp options
+
+---
+
+## 🏗️ Built With
+
+- **Frontend:** React.js + Vite + TypeScript
+- **Styling:** Tailwind CSS + Framer Motion
+- **3D Graphics:** Three.js
+- **AI:** Google Gemini API (Serverless Functions)
+- **Deployment:** Vercel
+- **UI Components:** Radix UI + shadcn/ui
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+
+- npm or pnpm
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Hassan136-nust/Portfolio.git
+
+# Navigate to frontend
+cd Portfolio/frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+```
+
+Visit `http://localhost:5173` to view the portfolio.
+
+---
+
+
+## 📫 Get In Touch
+
+I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+
+- **Email:** hjamal.bscs24seecs@seecs.edu.pk
+- **Phone:** 0328-9082754
+- **LinkedIn:** [Connect with me](https://linkedin.com)
+- **GitHub:** [Follow me](https://github.com/Hassan136-nust)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+- Three.js for 3D graphics
+- Google Gemini for AI capabilities
+- Vercel for hosting
+- shadcn/ui for UI components
+
+---
+
+<div align="center">
+
+**Built with ❤️ by Hassan Jamal**
+
+⭐ Star this repo if you like it!
+
+</div>
