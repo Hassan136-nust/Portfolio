@@ -126,7 +126,7 @@ export const HeroSection = ({ name, title, profileImage }: HeroSectionProps) => 
               </div>
               <div className="rounded-2xl border border-[#D4C4B0] bg-[#E8DFD0] p-4 text-left">
                 <p className="text-xs uppercase tracking-[0.2em] text-[#666666]">Focus</p>
-                <p className="mt-2 text-sm font-medium text-[#111111]">Full-Stack, AI & 3D Web</p>
+                <p className="mt-2 text-sm font-medium text-[#111111]">Engineering Gen-AI systems, scalable MERN applications and real-time collaboration platforms.</p>
               </div>
             </div>
           </motion.div>

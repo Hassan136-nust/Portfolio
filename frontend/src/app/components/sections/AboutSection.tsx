@@ -82,7 +82,7 @@ export const AboutSection = ({ bio, location, email, phone, social }: AboutSecti
             </div>
             <div className="rounded-3xl bg-[#E8DFD0] p-5">
               <p className="text-sm uppercase tracking-[0.25em] text-[#666666]">What I Build</p>
-              <p className="mt-3 text-lg text-[#111111]">Immersive 3D portfolios, scalable MERN platforms, AI-enabled workflows, and secure distributed systems.</p>
+              <p className="mt-3 text-lg text-[#111111]">Gen-AI and MERN-powered systems, real-time collaboration platforms, and developer tools with in-browser execution and intelligent automation.</p>
             </div>
           </div>
 
