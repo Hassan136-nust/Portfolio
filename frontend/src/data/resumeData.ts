@@ -29,16 +29,16 @@ export const profileData = {
       id: 2,
       company: 'UrbanPulse',
       position: 'MERN Stack Developer',
-      duration: 'In Progress',
-      description: 'Developing a geospatial urban intelligence platform using OpenStreetMap data, REST APIs, and MongoDB for city planning analysis.'
+      duration: '2026',
+      description: 'Developed a geospatial urban intelligence platform leveraging OpenStreetMap data, REST APIs, and MongoDB for city planning analysis, featuring an interactive 3D planner.'
     },
-    {
-      id: 3,
-      company: 'Real-Time Collaborative Editor',
-      position: 'Full-Stack Developer',
-      duration: '2024',
-      description: 'Built a CRDT-based multi-user code editor with real-time cursor syncing, Docker deployment, and AWS infrastructure.'
-    }
+   {
+  id: 3,
+  company: 'FREYA – Real-Time Collaborative AI Code Editor',
+  position: 'Full-Stack Developer',
+  duration: '2024–Present',
+  description: 'Built a real-time collaborative AI-powered code editor using CRDT-based synchronization, enabling multi-user editing with live cursor tracking, integrated AI code generation (Groq LLM), WebContainer-based in-browser execution, Dockerized deployment, and cloud-ready architecture.'
+}
   ],
   education: [
     {
@@ -84,7 +84,7 @@ export const projectsData = [
   {
     id: 4,
     title: 'UrbanPulse: GeoSpatial Urban Intelligence',
-    description: 'MERN stack platform for urban planning analytics using OpenStreetMap and spatial data processing.',
+    description: 'Built a scalable MERN stack geospatial analytics platform for urban planning using OpenStreetMap and advanced spatial data processing, enabling infrastructure analysis, location-based insights, and data-driven city development decision-making.',
     technologies: ['React', 'Node.js', 'MongoDB', 'OpenStreetMap'],
     image: '/images/urban.png',
     link: 'https://github.com/Hassan136-nust/Geo-Spatial-Database-for-Urban-Planning-.git',
