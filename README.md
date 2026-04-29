@@ -60,7 +60,7 @@ Groq • Gemini • Git • GitHub • VS Code • Postman • Figma
 - Browser-based Node.js runtime using WebContainer API
 - Live synchronization across multiple users
 
-### 🌆 UrbanPulse - GeoSpatial Urban Intelligence Platform
+### 🌆 UrbanPulse : GeoSpatial Urban Intelligence Platform
 **Tech:** MERN Stack + OpenStreetMap + Overpass API  
 **[GitHub](https://github.com/Hassan136-nust)**
 
