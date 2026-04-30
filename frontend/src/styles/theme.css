@@ -138,6 +138,20 @@
     display: none; /* Chrome, Safari, Opera */
   }
 
+  /* Cursor pointer for all clickable elements */
+  button,
+  a,
+  [role="button"],
+  [type="button"],
+  [type="submit"],
+  [type="reset"],
+  label[for],
+  select,
+  summary,
+  [tabindex]:not([tabindex="-1"]) {
+    cursor: pointer;
+  }
+
   /**
   * Default typography styles for HTML elements (h1-h4, p, label, button, input).
   * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
