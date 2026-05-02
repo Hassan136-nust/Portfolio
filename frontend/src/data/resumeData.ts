@@ -61,16 +61,6 @@ export const projectsData = [
   link: 'https://freya-agent.vercel.app/',
   github: 'https://github.com/Hassan136-nust/FREYA'
 },
-  {
-    id: 2,
-    title: 'Dimensional Aspect-Based Sentiment Analysis',
-    description: 'Research project focused on SemEval-2026 Task 3 using NLP models and deep learning for sentiment extraction.',
-    technologies: ['Python', 'NLP', 'Deep Learning', 'Data Engineering'],
-    image: '/images/asp.png',
-    link: 'https://github.com/Hassan136-nust/-Dimensional-Aspect-Based-Sentiment-Analysis.git',
-    github: 'https://github.com/Hassan136-nust/-Dimensional-Aspect-Based-Sentiment-Analysis.git'
-  },
-
 {
   id: 3,
   title: 'Gapify AI - Resume & Interview Analyzer',
@@ -80,7 +70,6 @@ export const projectsData = [
   link: 'https://gapify-ai.vercel.app/',
   github: 'https://github.com/Hassan136-nust/GAPIFY-AI-Resume-and-Job-analyzer.git'
 },
-
   {
     id: 4,
     title: 'UrbanPulse: GeoSpatial Urban Intelligence',
@@ -91,13 +80,13 @@ export const projectsData = [
     github: 'https://github.com/Hassan136-nust/Geo-Spatial-Database-for-Urban-Planning-.git'
   },
   {
-    id: 5,
-    title: 'Real-Time Collaborative Code Editor',
-    description: 'Multi-user collaborative editor with CRDT sync, Docker deployment, and AWS load-balanced infrastructure.',
-    technologies: ['React', 'Socket.io', 'Docker', 'AWS'],
-    image: '/images/code.png',
-    link: 'https://code-editor-live-jq2r.onrender.com',
-    github: 'https://github.com/Hassan136-nust'
+    id: 8,
+    title: 'Encrypted VPN with Login System',
+    description: 'Secure VPN solution with encrypted communication and session-based authentication.',
+    technologies: ['Java', 'Networking', 'Security'],
+    image: '/images/vpn.png',
+    link: 'https://github.com/hassan-136/Nova-Link.git',
+    github: 'https://github.com/hassan-136/Nova-Link.git'
   },
 {
   id: 6,
@@ -108,7 +97,24 @@ export const projectsData = [
   link: 'https://chess-arena-game.onrender.com/',
   github: 'https://github.com/Hassan136-nust/Online-Chess-Game.git'
 },
-
+  {
+    id: 2,
+    title: 'Dimensional Aspect-Based Sentiment Analysis',
+    description: 'Research project focused on SemEval-2026 Task 3 using NLP models and deep learning for sentiment extraction.',
+    technologies: ['Python', 'NLP', 'Deep Learning', 'Data Engineering'],
+    image: '/images/asp.png',
+    link: 'https://github.com/Hassan136-nust/-Dimensional-Aspect-Based-Sentiment-Analysis.git',
+    github: 'https://github.com/Hassan136-nust/-Dimensional-Aspect-Based-Sentiment-Analysis.git'
+  },
+  {
+    id: 5,
+    title: 'Real-Time Collaborative Code Editor',
+    description: 'Multi-user collaborative editor with CRDT sync, Docker deployment, and AWS load-balanced infrastructure.',
+    technologies: ['React', 'Socket.io', 'Docker', 'AWS'],
+    image: '/images/code.png',
+    link: 'https://code-editor-live-jq2r.onrender.com',
+    github: 'https://github.com/Hassan136-nust'
+  },
   {
     id: 7,
     title: 'Recommendation System with Graph Analysis',
@@ -117,15 +123,6 @@ export const projectsData = [
     image: '/images/dsa.png',
     link: 'https://github.com/Hassan136-nust/Recommendation-System.git',
     github: 'https://github.com/Hassan136-nust/Recommendation-System.git'
-  },
-  {
-    id: 8,
-    title: 'Encrypted VPN with Login System',
-    description: 'Secure VPN solution with encrypted communication and session-based authentication.',
-    technologies: ['Java', 'Networking', 'Security'],
-    image: '/images/vpn.png',
-    link: 'https://github.com/hassan-136/Nova-Link.git',
-    github: 'https://github.com/hassan-136/Nova-Link.git'
   },
   {
     id: 9,
