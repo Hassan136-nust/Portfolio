@@ -76,7 +76,7 @@ export const projectsData = [
     description: 'Built a scalable MERN stack geospatial analytics platform for urban planning using OpenStreetMap and advanced spatial data processing, enabling infrastructure analysis, location-based insights, and data-driven city development decision-making.',
     technologies: ['React', 'Node.js', 'MongoDB', 'OpenStreetMap'],
     image: '/images/urban.png',
-    link: 'https://github.com/Hassan136-nust/Geo-Spatial-Database-for-Urban-Planning-.git',
+    link: 'https://urban-pulse-system.vercel.app/',
     github: 'https://github.com/Hassan136-nust/Geo-Spatial-Database-for-Urban-Planning-.git'
   },
   {
