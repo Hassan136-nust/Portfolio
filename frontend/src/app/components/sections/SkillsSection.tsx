@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 import { Scene3D } from '../3d/Scene3D';
+import { Search } from 'lucide-react';
+import { useState } from 'react';
 
 interface SkillsSectionProps {
   skills: {
@@ -58,6 +60,9 @@ const getSkillIcon = (skill: string): string => {
 };
 
 export const SkillsSection = ({ skills }: SkillsSectionProps) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
   // Flatten all skills into a single array with their categories
   const allSkillsFlat = [
     ...skills.languages.map(skill => ({ name: skill, category: 'Language' })),
@@ -65,6 +70,15 @@ export const SkillsSection = ({ skills }: SkillsSectionProps) => {
     ...skills.backend.map(skill => ({ name: skill, category: 'Backend' })),
     ...skills.tools.map(skill => ({ name: skill, category: 'Tools' }))
   ];
+
+  // Filter skills based on search and category
+  const filteredSkills = allSkillsFlat.filter(skill => {
+    const matchesSearch = skill.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || skill.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const categories = ['All', 'Language', 'Frontend', 'Backend', 'Tools'];
 
   const shapes = [
     { type: 'octahedron' as const, position: [-4, 2, 0] as [number, number, number], speed: 1.2, color: '#A67C52' },
@@ -82,7 +96,7 @@ export const SkillsSection = ({ skills }: SkillsSectionProps) => {
 
       <div className="max-w-7xl mx-auto relative z-10 w-full">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-foreground mb-16 text-center"
+          className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -91,54 +105,103 @@ export const SkillsSection = ({ skills }: SkillsSectionProps) => {
           Skills & Expertise
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          {allSkillsFlat.map((skill, index) => {
-            const iconUrl = getSkillIcon(skill.name);
-            
-            return (
-              <motion.div
-                key={`${skill.name}-${index}`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -4, scale: 1.02 }}
-                className="group relative rounded-2xl border border-border bg-card p-5 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+        {/* Search and Filter Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-8 space-y-4"
+        >
+          {/* Search Bar */}
+          <div className="relative max-w-md mx-auto">
+            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+            <input
+              type="text"
+              placeholder="Search skills..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-12 pr-4 py-3 rounded-2xl border border-border bg-card text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
+            />
+          </div>
+
+          {/* Category Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-2">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
+                  selectedCategory === category
+                    ? 'bg-primary text-primary-foreground shadow-lg'
+                    : 'bg-card text-foreground border border-border hover:border-primary'
+                }`}
               >
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-card flex items-center justify-center">
-                    <img 
-                      src={iconUrl} 
-                      alt={`${skill.name} icon`}
-                      className="w-8 h-8 object-contain"
-                      onError={(e) => {
-                        // Fallback: show first letter if image fails
-                        const target = e.currentTarget;
-                        const parent = target.parentElement;
-                        if (parent) {
-                          target.style.display = 'none';
-                          const fallback = document.createElement('div');
-                          fallback.className = 'w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary font-bold text-sm';
-                          fallback.textContent = skill.name.charAt(0).toUpperCase();
-                          parent.appendChild(fallback);
-                        }
-                      }}
-                    />
+                {category}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Skills Grid */}
+        {filteredSkills.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {filteredSkills.map((skill, index) => {
+              const iconUrl = getSkillIcon(skill.name);
+              
+              return (
+                <motion.div
+                  key={`${skill.name}-${index}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.03 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -4, scale: 1.02 }}
+                  className="group relative rounded-2xl border border-border bg-card p-5 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-card flex items-center justify-center">
+                      <img 
+                        src={iconUrl} 
+                        alt={`${skill.name} icon`}
+                        className="w-8 h-8 object-contain"
+                        onError={(e) => {
+                          // Fallback: show first letter if image fails
+                          const target = e.currentTarget;
+                          const parent = target.parentElement;
+                          if (parent) {
+                            target.style.display = 'none';
+                            const fallback = document.createElement('div');
+                            fallback.className = 'w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary font-bold text-sm';
+                            fallback.textContent = skill.name.charAt(0).toUpperCase();
+                            parent.appendChild(fallback);
+                          }
+                        }}
+                      />
+                    </div>
+                    
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-base font-semibold text-foreground mb-1 truncate">
+                        {skill.name}
+                      </h3>
+                      <p className="text-xs text-muted-foreground">
+                        {skill.category}
+                      </p>
+                    </div>
                   </div>
-                  
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-base font-semibold text-foreground mb-1 truncate">
-                      {skill.name}
-                    </h3>
-                    <p className="text-xs text-muted-foreground">
-                      {skill.category}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-12"
+          >
+            <p className="text-muted-foreground text-lg">No skills found matching your search.</p>
+          </motion.div>
+        )}
       </div>
     </section>
   );
