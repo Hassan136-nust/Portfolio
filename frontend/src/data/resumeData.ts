@@ -121,7 +121,7 @@ export const projectsData = [
     description: 'Graph-based recommendation engine using network analysis for relationship-based suggestions.',
     technologies: ['Python', 'Graph Analysis', 'Machine Learning'],
     image: '/images/dsa.png',
-    link: 'https://github.com/Hassan136-nust/Recommendation-System.git',
+    link: 'https://www.linkedin.com/posts/hassan-jamal-a92191324_dsa-project-link-lab-interactive-recommendation-ugcPost-7414198892663095296-qZU5?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHlcc4Btv9XDP73DxewBro0OhHjPFvmXuQ',
     github: 'https://github.com/Hassan136-nust/Recommendation-System.git'
   },
   {
@@ -130,7 +130,7 @@ export const projectsData = [
     description: 'JavaFX voting application with candidate management, animations, and persistent storage.',
     technologies: ['JavaFX', 'Java', 'UI Design'],
     image: '/images/vote.png',
-    link: 'https://github.com/Hassan136-nust',
+    link: 'https://www.linkedin.com/posts/hassan-jamal-a92191324_javafx-oop-votingsystem-ugcPost-7336054058991964161-Dtkn?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHlcc4Btv9XDP73DxewBro0OhHjPFvmXuQ',
     github: 'https://github.com/Hassan136-nust'
   },
   {
@@ -139,7 +139,7 @@ export const projectsData = [
     description: 'Developed a database-driven application with product, cart, and user management features.',
     technologies: ['Java', 'Database'],
     image: '/images/shop.png',
-    link: 'https://github.com/Hassan136-nust',
+    link: 'https://www.linkedin.com/posts/hassan-jamal-a92191324_hirento-rentalsystem-databaseproject-ugcPost-7339522487765843968-Eo9d?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHlcc4Btv9XDP73DxewBro0OhHjPFvmXuQ',
     github: 'https://github.com/Hassan136-nust'
   },
   {
@@ -148,7 +148,7 @@ export const projectsData = [
     description: 'Built a 2D game with physics, collision detection, and rendering pipeline.',
     technologies: ['C++', 'Raylib'],
     image: '/images/game.png',
-    link: 'https://github.com/Hassan136-nust',
+    link: 'https://www.linkedin.com/posts/hassan-jamal-a92191324_programmingjourney-gamedevelopment-c-ugcPost-7283507983957815297-qe03?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFHlcc4Btv9XDP73DxewBro0OhHjPFvmXuQ',
     github: 'https://github.com/Hassan136-nust'
   }
 ];
