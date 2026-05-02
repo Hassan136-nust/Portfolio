@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 interface NavigationProps {
   currentSection: number;
   profileImage?: string;
   onChatOpen?: () => void;
+  theme?: 'light' | 'dark';
+  onThemeToggle?: () => void;
 }
 
 const sections = [
@@ -17,7 +19,7 @@ const sections = [
   { name: 'AI Assistant', id: 'chat' }
 ];
 
-export const Navigation = ({ currentSection, profileImage, onChatOpen }: NavigationProps) => {
+export const Navigation = ({ currentSection, profileImage, onChatOpen, theme = 'light', onThemeToggle }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -47,18 +49,18 @@ export const Navigation = ({ currentSection, profileImage, onChatOpen }: Navigat
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-            ? 'bg-[#F5EFE6]/95 backdrop-blur-xl shadow-lg border-b border-[#D4C4B0]'
+            ? 'bg-card/95 backdrop-blur-xl shadow-lg border-b border-border'
             : 'bg-transparent'
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-lg text-[#111111] flex items-center">
+            <div className="font-bold text-lg text-foreground flex items-center">
               {profileImage ? (
                 <img
                   src={profileImage}
                   alt="Profile"
-                  className="w-10 h-10 rounded-full object-cover object-top border-2 border-[#A67C52] shadow-sm"
+                  className="w-10 h-10 rounded-full object-cover object-top border-2 border-primary shadow-sm"
                 />
               ) : (
                 'HJ'
@@ -72,8 +74,8 @@ export const Navigation = ({ currentSection, profileImage, onChatOpen }: Navigat
                   key={section.id}
                   onClick={() => scrollToSection(section.id)}
                   className={`text-sm transition-colors ${currentSection === sections.indexOf(section)
-                      ? 'text-[#A67C52] font-medium'
-                      : 'text-[#666666] hover:text-[#111111]'
+                      ? 'text-primary font-medium'
+                      : 'text-muted-foreground hover:text-foreground'
                     }`}
                 >
                   {section.name}
@@ -82,20 +84,33 @@ export const Navigation = ({ currentSection, profileImage, onChatOpen }: Navigat
             </div>
 
             <div className="flex items-center gap-4">
-              <span className="hidden md:block text-sm tracking-[0.2em] uppercase text-[#666666]">
+              <span className="hidden md:block text-sm tracking-[0.2em] uppercase text-muted-foreground">
                 Hassan Jamal
               </span>
+
+              {/* Theme Toggle Button */}
+              <button
+                onClick={onThemeToggle}
+                className="p-2 rounded-lg hover:bg-muted transition-colors"
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? (
+                  <Sun className="w-5 h-5 text-primary" />
+                ) : (
+                  <Moon className="w-5 h-5 text-primary" />
+                )}
+              </button>
 
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 rounded-lg hover:bg-[#E5E5E5] transition-colors"
+                className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
                 aria-label="Toggle menu"
               >
                 {isMenuOpen ? (
-                  <X className="w-5 h-5 text-[#111111]" />
+                  <X className="w-5 h-5 text-foreground" />
                 ) : (
-                  <Menu className="w-5 h-5 text-[#111111]" />
+                  <Menu className="w-5 h-5 text-foreground" />
                 )}
               </button>
             </div>
@@ -105,15 +120,15 @@ export const Navigation = ({ currentSection, profileImage, onChatOpen }: Navigat
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#E8DFD0] md:hidden">
+        <div className="fixed inset-0 z-40 bg-background md:hidden">
           <div className="flex flex-col items-center justify-center h-full gap-8">
             {sections.map((section) => (
               <button
                 key={section.id}
                 onClick={() => scrollToSection(section.id)}
                 className={`text-2xl transition-colors ${currentSection === sections.indexOf(section)
-                    ? 'text-[#A67C52] font-medium'
-                    : 'text-[#666666]'
+                    ? 'text-primary font-medium'
+                    : 'text-muted-foreground'
                   }`}
               >
                 {section.name}
@@ -124,9 +139,9 @@ export const Navigation = ({ currentSection, profileImage, onChatOpen }: Navigat
       )}
 
       {/* Scroll Progress Indicator */}
-      <div className="fixed top-16 left-0 right-0 h-0.5 bg-[#D4C4B0] z-40">
+      <div className="fixed top-16 left-0 right-0 h-0.5 bg-border z-40">
         <div
-          className="h-full bg-[#A67C52] transition-all duration-100"
+          className="h-full bg-primary transition-all duration-100"
           style={{ width: `${(currentSection / (sections.length - 1)) * 100}%` }}
         />
       </div>

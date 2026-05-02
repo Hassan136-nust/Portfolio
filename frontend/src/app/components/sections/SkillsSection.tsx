@@ -27,14 +27,14 @@ export const SkillsSection = ({ skills }: SkillsSectionProps) => {
   ];
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center px-4 py-20 bg-[#E8DFD0] text-[#111111] overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(166,124,82,0.08),_transparent_28%),radial-gradient(circle_at_80%_35%,_rgba(196,165,123,0.06),_transparent_24%)]" />
-      <div className="absolute left-[-10%] top-16 h-72 w-72 rounded-full bg-[#A67C52]/10 blur-3xl" />
-      <div className="absolute right-[-10%] bottom-20 h-64 w-64 rounded-full bg-[#C4A57B]/10 blur-3xl" />
+    <section className="relative w-full min-h-screen flex items-center justify-center px-4 py-20 bg-background text-foreground overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--primary)_0.08,_transparent_28%),radial-gradient(circle_at_80%_35%,_var(--primary)_0.06,_transparent_24%)]" />
+      <div className="absolute left-[-10%] top-16 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+      <div className="absolute right-[-10%] bottom-20 h-64 w-64 rounded-full bg-primary/8 blur-3xl" />
 
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-[#111111] mb-16 text-center"
+          className="text-4xl md:text-5xl font-bold text-foreground mb-16 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -51,9 +51,9 @@ export const SkillsSection = ({ skills }: SkillsSectionProps) => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: groupIndex * 0.2 }}
               viewport={{ once: true }}
-              className="rounded-[2rem] border border-[#D4C4B0] bg-[#F5EFE6] p-8 shadow-lg"
+              className="rounded-[2rem] border border-border bg-card p-8 shadow-lg"
             >
-              <h3 className="text-2xl font-bold text-[#111111] mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-6">
                 {skillGroup.category}
               </h3>
 
@@ -66,11 +66,7 @@ export const SkillsSection = ({ skills }: SkillsSectionProps) => {
                     transition={{ duration: 0.4, delay: groupIndex * 0.2 + index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ scale: 1.05, rotate: 1 }}
-                    className="rounded-2xl border border-[#D4C4B0] px-4 py-2 text-sm font-medium shadow-sm"
-                    style={{
-                      backgroundColor: `${skillGroup.color}15`,
-                      color: skillGroup.color
-                    }}
+                    className="rounded-2xl border border-border bg-primary/10 px-4 py-2 text-sm font-medium text-primary shadow-sm"
                   >
                     {skill}
                   </motion.div>

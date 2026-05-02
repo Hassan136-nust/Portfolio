@@ -66,13 +66,13 @@ export const ContactSection = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center px-4 py-20 bg-[#E8DFD0] text-[#111111] overflow-hidden">
-      <div className="absolute right-0 top-20 h-72 w-72 rounded-full bg-[#A67C52]/10 blur-3xl" />
-      <div className="absolute left-0 bottom-10 h-64 w-64 rounded-full bg-[#C4A57B]/10 blur-3xl" />
+    <section className="relative w-full min-h-screen flex items-center justify-center px-4 py-20 bg-background text-foreground overflow-hidden">
+      <div className="absolute right-0 top-20 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+      <div className="absolute left-0 bottom-10 h-64 w-64 rounded-full bg-primary/8 blur-3xl" />
 
       <div className="max-w-6xl mx-auto w-full">
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-[#111111] mb-8 text-center"
+          className="text-4xl md:text-5xl font-bold text-foreground mb-8 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -82,7 +82,7 @@ export const ContactSection = () => {
         </motion.h2>
 
         <motion.p
-          className="text-lg text-[#666666] mb-12 text-center max-w-2xl mx-auto"
+          className="text-lg text-muted-foreground mb-12 text-center max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -98,10 +98,10 @@ export const ContactSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="space-y-6 rounded-[2rem] border border-[#D4C4B0] bg-[#F5EFE6] p-8 shadow-lg"
+            className="space-y-6 rounded-[2rem] border border-border bg-card p-8 shadow-lg"
           >
             <div>
-              <label htmlFor="name" className="block text-sm font-medium text-[#111111] mb-2">
+              <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                 Name
               </label>
               <input
@@ -110,13 +110,13 @@ export const ContactSection = () => {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 required
-                className="w-full rounded-2xl border border-[#D4C4B0] bg-[#F5EFE6] px-4 py-3 text-[#111111] outline-none transition focus:border-[#A67C52] focus:ring-2 focus:ring-[#A67C52]/20"
+                className="w-full rounded-2xl border border-border bg-input-background px-4 py-3 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                 placeholder="Your name"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-[#111111] mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                 Email
               </label>
               <input
@@ -125,13 +125,13 @@ export const ContactSection = () => {
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 required
-                className="w-full rounded-2xl border border-[#D4C4B0] bg-[#F5EFE6] px-4 py-3 text-[#111111] outline-none transition focus:border-[#A67C52] focus:ring-2 focus:ring-[#A67C52]/20"
+                className="w-full rounded-2xl border border-border bg-input-background px-4 py-3 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                 placeholder="your.email@example.com"
               />
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-[#111111] mb-2">
+              <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                 Message
               </label>
               <textarea
@@ -140,7 +140,7 @@ export const ContactSection = () => {
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 required
                 rows={5}
-                className="w-full rounded-2xl border border-[#D4C4B0] bg-[#F5EFE6] px-4 py-3 text-[#111111] outline-none transition focus:border-[#A67C52] focus:ring-2 focus:ring-[#A67C52]/20 resize-none"
+                className="w-full rounded-2xl border border-border bg-input-background px-4 py-3 text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20 resize-none"
                 placeholder="Tell me about your project..."
               />
             </div>
@@ -151,7 +151,7 @@ export const ContactSection = () => {
     disabled={isSubmitting || isSuccess}
     whileHover={{ scale: 1.02 }}
     whileTap={{ scale: 0.98 }}
-    className="w-full rounded-2xl bg-[#A67C52] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#8B6F47] disabled:bg-[#D4C4B0] disabled:text-[#666666] flex items-center justify-center gap-2"
+    className="w-full rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 disabled:bg-muted disabled:text-muted-foreground flex items-center justify-center gap-2"
   >
     {isSuccess ? (
       <>
@@ -170,7 +170,7 @@ export const ContactSection = () => {
     disabled={isSubmitting || isSuccess}
     whileHover={{ scale: 1.02 }}
     whileTap={{ scale: 0.98 }}
-    className="w-full rounded-2xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20BA5A] disabled:bg-[#D4C4B0] disabled:text-[#666666] flex items-center justify-center gap-2"
+    className="w-full rounded-2xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20BA5A] disabled:bg-muted disabled:text-muted-foreground flex items-center justify-center gap-2"
   >
     <MessageCircle className="w-5 h-5" />
     {isSubmitting ? 'Opening...' : 'Send via WhatsApp'}
@@ -204,24 +204,24 @@ export const ContactSection = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="rounded-[2rem] border border-[#D4C4B0] bg-[#F5EFE6] p-8 shadow-lg">
-              <h3 className="text-2xl font-semibold text-[#111111] mb-4">Download Resume</h3>
-              <p className="text-[#666666] mb-6">
+            <div className="rounded-[2rem] border border-border bg-card p-8 shadow-lg">
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Download Resume</h3>
+              <p className="text-muted-foreground mb-6">
                 Grab a structured PDF version of this resume with all experience, projects, and skills.
               </p>
               <motion.button
                 onClick={handleDownloadResume}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center rounded-2xl bg-[#A67C52] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#8B6F47]"
+                className="inline-flex items-center justify-center rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90"
               >
                 <Download className="w-5 h-5 mr-2" /> Download PDF
               </motion.button>
             </div>
 
-            <div className="rounded-[2rem] border border-[#D4C4B0] bg-gradient-to-br from-[#F5EFE6] to-[#E8DFD0] p-8 shadow-lg">
-              <h3 className="text-2xl font-semibold text-[#111111] mb-4">Let's Work Together</h3>
-              <p className="text-[#666666]">
+            <div className="rounded-[2rem] border border-border bg-gradient-to-br from-card to-background p-8 shadow-lg">
+              <h3 className="text-2xl font-semibold text-foreground mb-4">Let's Work Together</h3>
+              <p className="text-muted-foreground">
                 Whether it's a web app, a research system, or a deployment pipeline, I'm ready to help build it.
               </p>
             </div>

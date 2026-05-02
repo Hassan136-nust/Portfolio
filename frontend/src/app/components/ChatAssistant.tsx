@@ -86,7 +86,7 @@ export const ChatAssistant = ({ isOpen, onToggle }: ChatAssistantProps) => {
    {/* Chat Button */}
 <motion.button
   onClick={() => onToggle(!isOpen)}
-  className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#A67C52] px-4 py-3 text-white shadow-lg transition hover:bg-[#8B6F47]"
+  className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-primary px-4 py-3 text-primary-foreground shadow-lg transition hover:bg-primary/90"
   whileHover={{ scale: 1.1 }}
   whileTap={{ scale: 0.9 }}
 >
@@ -108,17 +108,17 @@ export const ChatAssistant = ({ isOpen, onToggle }: ChatAssistantProps) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-24 right-6 z-50 flex h-[500px] w-[380px] flex-col rounded-2xl border border-[#D4C4B0] bg-[#F5EFE6] shadow-2xl"
+            className="fixed bottom-24 right-6 z-50 flex h-[500px] w-[380px] flex-col rounded-2xl border border-border bg-card shadow-2xl"
           >
             {/* Header */}
-            <div className="flex items-center justify-between rounded-t-2xl bg-[#A67C52] px-4 py-3 text-white">
+            <div className="flex items-center justify-between rounded-t-2xl bg-primary px-4 py-3 text-primary-foreground">
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-green-400 animate-pulse" />
                 <h3 className="font-semibold">Hassan's Assistant</h3>
               </div>
               <button
                 onClick={() => onToggle(false)}
-                className="rounded-lg p-1 transition hover:bg-[#8B6F47]"
+                className="rounded-lg p-1 transition hover:bg-primary/80"
               >
                 <X className="h-5 w-5" />
               </button>
@@ -136,12 +136,12 @@ export const ChatAssistant = ({ isOpen, onToggle }: ChatAssistantProps) => {
                   <div
                     className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                       message.sender === 'user'
-                        ? 'bg-[#A67C52] text-white'
-                        : 'bg-[#E8DFD0] text-[#111111] border border-[#D4C4B0]'
+                        ? 'bg-primary text-primary-foreground'
+                        : 'bg-background text-foreground border border-border'
                     }`}
                   >
                     <p className="text-sm whitespace-pre-wrap">{message.text}</p>
-                    <p className={`text-xs mt-1 ${message.sender === 'user' ? 'text-white/70' : 'text-[#666666]'}`}>
+                    <p className={`text-xs mt-1 ${message.sender === 'user' ? 'text-primary-foreground/70' : 'text-muted-foreground'}`}>
                       {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </p>
                   </div>
@@ -154,8 +154,8 @@ export const ChatAssistant = ({ isOpen, onToggle }: ChatAssistantProps) => {
                   animate={{ opacity: 1 }}
                   className="flex justify-start"
                 >
-                  <div className="bg-[#E8DFD0] border border-[#D4C4B0] rounded-2xl px-4 py-2">
-                    <Loader2 className="h-5 w-5 animate-spin text-[#A67C52]" />
+                  <div className="bg-background border border-border rounded-2xl px-4 py-2">
+                    <Loader2 className="h-5 w-5 animate-spin text-primary" />
                   </div>
                 </motion.div>
               )}
@@ -164,7 +164,7 @@ export const ChatAssistant = ({ isOpen, onToggle }: ChatAssistantProps) => {
             </div>
 
             {/* Input */}
-            <div className="border-t border-[#D4C4B0] p-4">
+            <div className="border-t border-border p-4">
               <div className="flex gap-2">
                 <input
                   type="text"
@@ -172,13 +172,13 @@ export const ChatAssistant = ({ isOpen, onToggle }: ChatAssistantProps) => {
                   onChange={(e) => setInputMessage(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Ask about Hassan's skills, projects..."
-                  className="flex-1 rounded-xl border border-[#D4C4B0] bg-white px-4 py-2 text-sm text-[#111111] outline-none transition focus:border-[#A67C52] focus:ring-2 focus:ring-[#A67C52]/20"
+                  className="flex-1 rounded-xl border border-border bg-background px-4 py-2 text-sm text-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
                   disabled={isLoading}
                 />
                 <button
                   onClick={handleSendMessage}
                   disabled={!inputMessage.trim() || isLoading}
-                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#A67C52] text-white transition hover:bg-[#8B6F47] disabled:bg-[#D4C4B0] disabled:cursor-not-allowed"
+                  className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-foreground transition hover:bg-primary/90 disabled:bg-muted disabled:cursor-not-allowed"
                 >
                   <Send className="h-5 w-5" />
                 </button>

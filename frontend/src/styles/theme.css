@@ -1,6 +1,7 @@
 @custom-variant dark (&:is(.dark *));
 
-:root {
+:root,
+.light {
   --font-size: 16px;
   --background: #E8DFD0;
   --foreground: #111111;
@@ -42,40 +43,42 @@
 }
 
 .dark {
-  --background: #E8DFD0;
-  --foreground: #111111;
-  --card: #F5EFE6;
-  --card-foreground: #111111;
-  --popover: #F5EFE6;
-  --popover-foreground: #111111;
-  --primary: #A67C52;
-  --primary-foreground: #FFFFFF;
-  --secondary: #E5E5E5;
-  --secondary-foreground: #111111;
-  --muted: #E5E5E5;
-  --muted-foreground: #666666;
-  --accent: #A67C52;
-  --accent-foreground: #FFFFFF;
-  --destructive: #d4183d;
-  --destructive-foreground: #FFFFFF;
-  --border: #D4C4B0;
-  --input: #F5EFE6;
-  --ring: #A67C52;
+  --background: #1a1a1a;
+  --foreground: #E8DFD0;
+  --card: #252525;
+  --card-foreground: #E8DFD0;
+  --popover: #2a2a2a;
+  --popover-foreground: #E8DFD0;
+  --primary: #C4A57B;
+  --primary-foreground: #1a1a1a;
+  --secondary: #2a2a2a;
+  --secondary-foreground: #E8DFD0;
+  --muted: #333333;
+  --muted-foreground: #A0A0A0;
+  --accent: #C4A57B;
+  --accent-foreground: #1a1a1a;
+  --destructive: #ef4444;
+  --destructive-foreground: #E8DFD0;
+  --border: #3a3a3a;
+  --input: #2a2a2a;
+  --input-background: #2a2a2a;
+  --switch-background: #333333;
+  --ring: #C4A57B;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --chart-1: #A67C52;
-  --chart-2: #8B6F47;
-  --chart-3: #C4A57B;
-  --chart-4: #D4B896;
+  --chart-1: #C4A57B;
+  --chart-2: #D4B896;
+  --chart-3: #A67C52;
+  --chart-4: #8B6F47;
   --chart-5: #9A7B5A;
-  --sidebar: #F5EFE6;
-  --sidebar-foreground: #111111;
-  --sidebar-primary: #A67C52;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #E5E5E5;
-  --sidebar-accent-foreground: #111111;
-  --sidebar-border: #D4C4B0;
-  --sidebar-ring: #A67C52;
+  --sidebar: #252525;
+  --sidebar-foreground: #E8DFD0;
+  --sidebar-primary: #C4A57B;
+  --sidebar-primary-foreground: #1a1a1a;
+  --sidebar-accent: #2a2a2a;
+  --sidebar-accent-foreground: #E8DFD0;
+  --sidebar-border: #3a3a3a;
+  --sidebar-ring: #C4A57B;
 }
 
 @theme inline {
