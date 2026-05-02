@@ -10,12 +10,60 @@ interface SkillsSectionProps {
   };
 }
 
+// Icon URLs for different skills using CDN
+const getSkillIcon = (skill: string): string => {
+  const iconMap: { [key: string]: string } = {
+    // Languages
+    'Python': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    'C++': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
+    'Java': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+    'JavaScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    'PL/SQL': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+    
+    // Frontend
+    'React.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    'HTML': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
+    'CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
+    'Tailwind CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+    'Bootstrap': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
+    
+    // Backend
+    'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    'Express.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+    'MongoDB': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    'REST APIs': 'https://cdn.simpleicons.org/fastapi/009688',
+    'JWT Authentication': 'https://cdn.simpleicons.org/jsonwebtokens/000000',
+    'MVC Architecture': 'https://cdn.simpleicons.org/dotnet/512BD4',
+    
+    // Tools - AI & Development
+    'Docker': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+    'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+    'Web Container': 'https://webcontainers.io/img/favicon.png',
+    'Cursor': 'https://substack-post-media.s3.amazonaws.com/public/images/e8faacfd-274f-4f71-802d-c544f5ee37ae_400x400.jpeg',
+    'Gen-AI': 'https://media.licdn.com/dms/image/v2/D4D22AQE-eTTF4DjVlA/feedshare-shrink_800/B4DZoWZAloJUAo-/0/1761312248558?e=2147483647&v=beta&t=3pFKp3uqedyAw8vPLTuVlocCJzW7e7UUdDNGqhaDo14',
+    'Antigravity': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvinjxr8MVZ69diNIbNNMfcUljy04dIjkqPQ&s',
+    'GitHub Copilot': 'https://api.iconify.design/simple-icons:githubcopilot.svg',
+    'Kiro': 'https://images.saasworthy.com/tr:w-160,h-0,c-at_max,e-sharpen-1/kiro_51769_logo_1753086501_0boi4.jpeg',
+    'Lovable': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ68l5UaflfP4iIhMlzUzn2o3051x_HwxLKg&s',
+    'Figma': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
+    'Nginx(Basic)': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
+    'Git': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    'VS Code': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
+    'PyCharm': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg',
+    'Postman': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg',
+  };
+
+  return iconMap[skill] || 'https://cdn.simpleicons.org/codepen/000000';
+};
+
 export const SkillsSection = ({ skills }: SkillsSectionProps) => {
-  const allSkills = [
-    { category: 'Languages', items: skills.languages, color: '#A67C52' },
-    { category: 'Frontend', items: skills.frontend, color: '#8B6F47' },
-    { category: 'Backend', items: skills.backend, color: '#C4A57B' },
-    { category: 'Tools', items: skills.tools, color: '#D4B896' }
+  // Flatten all skills into a single array with their categories
+  const allSkillsFlat = [
+    ...skills.languages.map(skill => ({ name: skill, category: 'Language' })),
+    ...skills.frontend.map(skill => ({ name: skill, category: 'Frontend' })),
+    ...skills.backend.map(skill => ({ name: skill, category: 'Backend' })),
+    ...skills.tools.map(skill => ({ name: skill, category: 'Tools' }))
   ];
 
   const shapes = [
@@ -32,7 +80,7 @@ export const SkillsSection = ({ skills }: SkillsSectionProps) => {
       <div className="absolute left-[-10%] top-16 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute right-[-10%] bottom-20 h-64 w-64 rounded-full bg-primary/8 blur-3xl" />
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 w-full">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-foreground mb-16 text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -43,37 +91,53 @@ export const SkillsSection = ({ skills }: SkillsSectionProps) => {
           Skills & Expertise
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {allSkills.map((skillGroup, groupIndex) => (
-            <motion.div
-              key={skillGroup.category}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: groupIndex * 0.2 }}
-              viewport={{ once: true }}
-              className="rounded-[2rem] border border-border bg-card p-8 shadow-lg"
-            >
-              <h3 className="text-2xl font-bold text-foreground mb-6">
-                {skillGroup.category}
-              </h3>
-
-              <div className="flex flex-wrap gap-3">
-                {skillGroup.items.map((skill, index) => (
-                  <motion.div
-                    key={skill}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: groupIndex * 0.2 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ scale: 1.05, rotate: 1 }}
-                    className="rounded-2xl border border-border bg-primary/10 px-4 py-2 text-sm font-medium text-primary shadow-sm"
-                  >
-                    {skill}
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+          {allSkillsFlat.map((skill, index) => {
+            const iconUrl = getSkillIcon(skill.name);
+            
+            return (
+              <motion.div
+                key={`${skill.name}-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.03 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="group relative rounded-2xl border border-border bg-card p-5 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-card flex items-center justify-center">
+                    <img 
+                      src={iconUrl} 
+                      alt={`${skill.name} icon`}
+                      className="w-8 h-8 object-contain"
+                      onError={(e) => {
+                        // Fallback: show first letter if image fails
+                        const target = e.currentTarget;
+                        const parent = target.parentElement;
+                        if (parent) {
+                          target.style.display = 'none';
+                          const fallback = document.createElement('div');
+                          fallback.className = 'w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center text-primary font-bold text-sm';
+                          fallback.textContent = skill.name.charAt(0).toUpperCase();
+                          parent.appendChild(fallback);
+                        }
+                      }}
+                    />
+                  </div>
+                  
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base font-semibold text-foreground mb-1 truncate">
+                      {skill.name}
+                    </h3>
+                    <p className="text-xs text-muted-foreground">
+                      {skill.category}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
