@@ -68,7 +68,7 @@ Groq • Gemini • Git • GitHub • VS Code • Postman • Figma
 - Infrastructure scoring and route analysis modules
 - Real-time spatial data visualization
 
-### 📄 Gapify AI - Resume & Interview Analyzer
+### 📄 Gapify AI : Resume & Interview Analyzer
 **Tech:** Gen-AI + MERN Stack + Groq LLM  
 **[Live Demo](https://gapify-demo.vercel.app)** | **[GitHub](https://github.com/Hassan136-nust)**
 
