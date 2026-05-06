@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Github } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { ChevronDown, Download } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -67,13 +67,20 @@ export const HeroSection = ({ name, title, profileImage }: HeroSectionProps) => 
               >
                 View Projects
               </button>
-   <button
-  onClick={() => window.open("https://github.com/Hassan136-nust", "_blank")}
-  className="inline-flex items-center justify-center rounded-2xl bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 gap-2"
->
-  <Github className="w-4 h-4" />
-  GitHub
-</button>
+              <button
+                onClick={() => window.open("https://github.com/Hassan136-nust", "_blank")}
+                className="inline-flex items-center justify-center rounded-2xl bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 gap-2"
+              >
+                <Github className="w-4 h-4" />
+                GitHub
+              </button>
+              <button
+                onClick={() => window.open("https://www.linkedin.com/in/hassan-jamal-a92191324/", "_blank")}
+                className="inline-flex items-center justify-center rounded-2xl bg-primary px-8 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 gap-2"
+              >
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
+              </button>
             </motion.div>
           </div>
 
