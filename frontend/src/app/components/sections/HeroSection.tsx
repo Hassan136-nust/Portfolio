@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import { Github } from "lucide-react";
-import { Scene3D } from '../3d/Scene3D';
 import { ChevronDown, Download } from 'lucide-react';
 
 interface HeroSectionProps {
@@ -10,19 +9,8 @@ interface HeroSectionProps {
 }
 
 export const HeroSection = ({ name, title, profileImage }: HeroSectionProps) => {
-  const shapes = [
-    { type: 'octahedron' as const, position: [-3, 1, -1], speed: 0.9, color: '#A67C52' },
-    { type: 'sphere' as const, position: [2.5, -1.5, -2], speed: 1.2, color: '#C4A57B' },
-    { type: 'torus' as const, position: [0, 2, -3], speed: 1, color: '#8B6F47' },
-    { type: 'box' as const, position: [-2.5, -2, 0.5], speed: 0.7, color: '#D4B896' }
-  ];
-
   return (
     <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-background via-background to-card text-foreground">
-      <div className="absolute inset-0 opacity-40">
-        <Scene3D shapes={shapes} />
-      </div>
-
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--primary)_0.08,_transparent_20%),radial-gradient(circle_at_80%_30%,_var(--primary)_0.06,_transparent_20%)]" />
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col justify-center px-4 py-24">
