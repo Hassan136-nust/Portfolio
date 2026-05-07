@@ -132,7 +132,7 @@ This portfolio website includes:
 - **Frontend:** React.js + Vite + TypeScript
 - **Styling:** Tailwind CSS + Framer Motion
 - **3D Graphics:** Three.js
-- **AI:** Google Gemini API (Serverless Functions)
+- **AI:** Groq API (Serverless Functions)
 - **Deployment:** Vercel
 - **UI Components:** Radix UI + shadcn/ui
 
