@@ -172,7 +172,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 
 - **Email:** hjamal.bscs24seecs@seecs.edu.pk
 - **Phone:** 0328-9082754
-- **LinkedIn:** [Connect with me](https://linkedin.com)
+- **LinkedIn:** [Connect with me](https://www.linkedin.com/in/hassan-jamal-a92191324/)
 - **GitHub:** [Follow me](https://github.com/Hassan136-nust)
 
 ---
