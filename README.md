@@ -194,7 +194,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 <div align="center">
 
-**Built with ❤️ by Hassan Jamal**
+**Built with ❤️ and ☕ by Hassan Jamal**
 
 ⭐ Star this repo if you like it!
 
