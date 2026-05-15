@@ -186,7 +186,7 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 🙏 Acknowledgments
 
 - Three.js for 3D graphics
-- Google Gemini for AI capabilities
+- Groq for AI capabilities
 - Vercel for hosting
 - shadcn/ui for UI components
 
