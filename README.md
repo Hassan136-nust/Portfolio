@@ -196,6 +196,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Built with ❤️ and ☕ by Hassan Jamal**
 
-⭐ Star this repo if you like it!
+⭐ Star this repo if you like it!!
 
 </div>
