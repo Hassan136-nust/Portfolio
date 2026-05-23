@@ -1,6 +1,6 @@
 # 🚀 Hassan Jamal - Portfolio
 
-A modern, interactive 3D portfolio website showcasing my projects, skills, and experience as a Computer Science student at NUST.
+A modern, interactive portfolio website showcasing my projects, skills, and experience as a Computer Science student at NUST.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://hassan-jamal-portfolio.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/your-profile)
