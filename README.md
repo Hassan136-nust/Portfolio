@@ -134,7 +134,7 @@ This portfolio website includes:
 - **3D Graphics:** Three.js
 - **AI:** Groq API (Serverless Functions)
 - **Deployment:** Vercel
-- **UI Components:** Radix UI 
+- **UI Components:** Radix UI + shadcn/u
 
 ---
 
