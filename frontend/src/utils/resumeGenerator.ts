@@ -275,6 +275,18 @@ export const generateAndDownloadResume = () => {
           </div>
 
           <div class="entry">
+  <div class="entry-header">
+    <div class="entry-title">Plantora – Full-Stack Plant E-Commerce Platform</div>
+    <div class="entry-date">2025</div>
+  </div>
+  <div class="entry-subtitle">MERN Stack E-Commerce System</div>
+  <ul>
+    <li>Built a production-ready full-stack e-commerce platform using MERN stack with JWT authentication, role-based admin dashboard, and secure user management system</li>
+    <li>Implemented persistent cart system (MongoDB + localStorage sync), dynamic plant catalog filtering, and real-time order lifecycle tracking</li>
+    <li>Integrated Cloudinary for image storage, receipt uploads, and media management with optimized backend APIs</li>
+  </ul>
+</div>
+          <div class="entry">
             <div class="entry-header">
               <div class="entry-title">Real-Time Collaborative Code Editor</div>
               <div class="entry-date">2024</div>

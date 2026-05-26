@@ -32,13 +32,13 @@ export const profileData = {
       duration: '2026',
       description: 'Developed a geospatial urban intelligence platform leveraging OpenStreetMap data, REST APIs, and MongoDB for city planning analysis, featuring an interactive 3D planner.'
     },
-   {
-  id: 3,
-  company: 'FREYA – Real-Time Collaborative AI Code Editor',
-  position: 'Full-Stack Developer',
-  duration: '2024–Present',
-  description: 'Built a real-time collaborative AI-powered code editor using CRDT-based synchronization, enabling multi-user editing with live cursor tracking, integrated AI code generation (Groq LLM), WebContainer-based in-browser execution, Dockerized deployment, and cloud-ready architecture.'
-}
+    {
+      id: 3,
+      company: 'FREYA – Real-Time Collaborative AI Code Editor',
+      position: 'Full-Stack Developer',
+      duration: '2024–Present',
+      description: 'Built a real-time collaborative AI-powered code editor using CRDT-based synchronization, enabling multi-user editing with live cursor tracking, integrated AI code generation (Groq LLM), WebContainer-based in-browser execution, Dockerized deployment, and cloud-ready architecture.'
+    }
   ],
   education: [
     {
@@ -53,23 +53,23 @@ export const profileData = {
 
 export const projectsData = [
   {
-  id: 1,
-  title: 'FREYA : AI-Powered Collaborative Code Editor',
-  description: 'Gen-AI powered collaborative development environment with real-time multi-user editing, in-browser code execution using WebContainers, and AI-assisted code generation via @freya.',
-  technologies: ['Gen-AI','React', 'Node.js', 'MongoDB', 'Socket.io', 'WebContainer API', 'Groq API', 'Redis', 'JWT'],
-  image: '/images/freya.png',
-  link: 'https://freya-agent.vercel.app/',
-  github: 'https://github.com/Hassan136-nust/FREYA'
-},
-{
-  id: 3,
-  title: 'Gapify AI - Resume & Interview Analyzer',
-  description: 'Gen-AI powered MERN app that analyzes resumes, detects skill gaps, generates interview questions, and provides a preparation roadmap.',
-  technologies: ['Gen-AI','React', 'Node.js', 'MongoDB', 'Groq API', 'JWT'],
-  image: '/images/gen.png',
-  link: 'https://gapify-ai.vercel.app/',
-  github: 'https://github.com/Hassan136-nust/GAPIFY-AI-Resume-and-Job-analyzer.git'
-},
+    id: 1,
+    title: 'FREYA : AI-Powered Collaborative Code Editor',
+    description: 'Gen-AI powered collaborative development environment with real-time multi-user editing, in-browser code execution using WebContainers, and AI-assisted code generation via @freya.',
+    technologies: ['Gen-AI','React', 'Node.js', 'MongoDB', 'Socket.io', 'WebContainer API', 'Groq API', 'Redis', 'JWT'],
+    image: '/images/freya.png',
+    link: 'https://freya-agent.vercel.app/',
+    github: 'https://github.com/Hassan136-nust/FREYA'
+  },
+  {
+    id: 3,
+    title: 'Gapify AI - Resume & Interview Analyzer',
+    description: 'Gen-AI powered MERN app that analyzes resumes, detects skill gaps, generates interview questions, and provides a preparation roadmap.',
+    technologies: ['Gen-AI','React', 'Node.js', 'MongoDB', 'Groq API', 'JWT'],
+    image: '/images/gen.png',
+    link: 'https://gapify-ai.vercel.app/',
+    github: 'https://github.com/Hassan136-nust/GAPIFY-AI-Resume-and-Job-analyzer.git'
+  },
   {
     id: 4,
     title: 'UrbanPulse: GeoSpatial Urban Intelligence',
@@ -80,6 +80,15 @@ export const projectsData = [
     github: 'https://github.com/Hassan136-nust/Geo-Spatial-Database-for-Urban-Planning-.git'
   },
   {
+    id: 12,
+    title: 'Plantora - Full-Stack Plant E-Commerce Platform',
+    description: 'Production-grade MERN stack e-commerce platform with JWT authentication, admin CMS, persistent cart (DB + localStorage), Cloudinary image management, secure checkout system, and full order lifecycle management.',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'Cloudinary'],
+    image: '/images/plantora.png',
+    link: 'https://zia-nursery.vercel.app/',
+    github: 'https://github.com/Hassan136-nust'
+  },
+  {
     id: 8,
     title: 'Encrypted VPN with Login System',
     description: 'Secure VPN solution with encrypted communication and session-based authentication.',
@@ -88,15 +97,15 @@ export const projectsData = [
     link: 'https://github.com/hassan-136/Nova-Link.git',
     github: 'https://github.com/hassan-136/Nova-Link.git'
   },
-{
-  id: 6,
-  title: 'Chess Arena - Real-Time Multiplayer Game',
-  description: 'Real-time multiplayer chess game with live chat, WebSocket sync, and containerized deployment on Render.',
-  technologies: ['Node.js', 'Express', 'Socket.io', 'Chess.js', 'Docker'],
-  image: '/images/chess.png',
-  link: 'https://chess-arena-game.onrender.com/',
-  github: 'https://github.com/Hassan136-nust/Online-Chess-Game.git'
-},
+  {
+    id: 6,
+    title: 'Chess Arena - Real-Time Multiplayer Game',
+    description: 'Real-time multiplayer chess game with live chat, WebSocket sync, and containerized deployment on Render.',
+    technologies: ['Node.js', 'Express', 'Socket.io', 'Chess.js', 'Docker'],
+    image: '/images/chess.png',
+    link: 'https://chess-arena-game.onrender.com/',
+    github: 'https://github.com/Hassan136-nust/Online-Chess-Game.git'
+  },
   {
     id: 2,
     title: 'Dimensional Aspect-Based Sentiment Analysis',
