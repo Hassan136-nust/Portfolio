@@ -84,7 +84,7 @@ export const projectsData = [
     title: 'Plantora - Full-Stack Plant E-Commerce Platform',
     description: 'Production-grade MERN stack e-commerce platform with JWT authentication, admin CMS, persistent cart (DB + localStorage), Cloudinary image management, secure checkout system, and full order lifecycle management.',
     technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'Cloudinary'],
-    image: '/images/plantora.png',
+    image: '/images/p1.jpg',
     link: 'https://zia-nursery.vercel.app/',
     github: 'https://github.com/Hassan136-nust'
   },
