@@ -268,9 +268,9 @@ export const generateAndDownloadResume = () => {
             </div>
             <div class="entry-subtitle">MERN Stack</div>
             <ul>
-              <li>Building a full-stack MERN application for geospatial urban analysis using OpenStreetMap APIs</li>
-              <li>Implementing REST APIs and backend services for processing spatial data with MongoDB</li>
-              <li>Designing infrastructure scoring algorithms and route planning modules</li>
+             <li>Built a full-stack MERN application for geospatial urban analysis using OpenStreetMap APIs</li>
+<li>Implemented REST APIs and backend services for processing spatial data with MongoDB</li>
+<li>Designed infrastructure scoring algorithms and route planning modules</li>
             </ul>
           </div>
 
