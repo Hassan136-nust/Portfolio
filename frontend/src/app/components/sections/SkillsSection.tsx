@@ -20,6 +20,7 @@ const getSkillIcon = (skill: string): string => {
     'C++': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
     'Java': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
     'JavaScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+    'TypeScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
     'PL/SQL': 'https://oralytics.com/wp-content/uploads/2022/10/pl-sql_icon-1.png',
     
     // Frontend

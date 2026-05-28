@@ -196,7 +196,7 @@ export const generateAndDownloadResume = () => {
           <div class="skills-grid">
             <div class="skill-category">
               <div class="skill-category-title">Programming Languages</div>
-              <div class="skill-items">Python, C++, Java, JavaScript, PL/SQL</div>
+              <div class="skill-items">Python, C++, Java, JavaScript, TypeScript, PL/SQL</div>
             </div>
             <div class="skill-category">
               <div class="skill-category-title">Frontend</div>

@@ -33,7 +33,7 @@ National University of Sciences and Technology (NUST)
 ## 🛠️ Tech Stack
 
 ### Languages
-Python • C++ • Java • JavaScript • PL/SQL
+Python • C++ • Java • JavaScript • TypeScript • PL/SQL
 
 ### Frontend
 React.js • HTML • CSS • Tailwind CSS • Bootstrap • Three.js
