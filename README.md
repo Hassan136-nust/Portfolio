@@ -45,7 +45,7 @@ Node.js • Express.js • MongoDB • REST APIs • JWT • WebSockets • Sock
 Docker • AWS (ECR, ECS, ALB) • Nginx • Vercel • Render
 
 ### AI & Tools
-Groq • Gemini  • Git • GitHub • VS Code • Postman • Figma
+Groq • Gemini • OpenAI • Git • GitHub • VS Code • Postman • Figma
 
 ---
 
