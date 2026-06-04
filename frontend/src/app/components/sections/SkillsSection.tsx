@@ -22,15 +22,16 @@ const getSkillIcon = (skill: string): string => {
     'JavaScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
     'TypeScript': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
     'PL/SQL': 'https://oralytics.com/wp-content/uploads/2022/10/pl-sql_icon-1.png',
-    
+
     // Frontend
+    'Next.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
     'React.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     'React': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     'HTML': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg',
     'CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg',
     'Tailwind CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
     'Bootstrap': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg',
-    
+
     // Backend
     'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
     'Express.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
@@ -38,11 +39,11 @@ const getSkillIcon = (skill: string): string => {
     'REST APIs': 'https://cdn.simpleicons.org/fastapi/009688',
     'JWT Authentication': 'https://cdn.simpleicons.org/jsonwebtokens/000000',
     'MVC Architecture': 'https://cdn.simpleicons.org/dotnet/512BD4',
-    
+
     // Tools - AI & Development
     'Docker': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
     'AWS': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
-    'Web Container': 'https://roy29fuku.com/wp-content/uploads/2017/10/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2017-10-08-16.35.24.png',
+    'WebContainer': 'https://roy29fuku.com/wp-content/uploads/2017/10/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88-2017-10-08-16.35.24.png',
     'Cursor': 'https://substack-post-media.s3.amazonaws.com/public/images/e8faacfd-274f-4f71-802d-c544f5ee37ae_400x400.jpeg',
     'Gen-AI': 'https://media.licdn.com/dms/image/v2/D4D22AQE-eTTF4DjVlA/feedshare-shrink_800/B4DZoWZAloJUAo-/0/1761312248558?e=2147483647&v=beta&t=3pFKp3uqedyAw8vPLTuVlocCJzW7e7UUdDNGqhaDo14',
     'Antigravity': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvinjxr8MVZ69diNIbNNMfcUljy04dIjkqPQ&s',
@@ -50,7 +51,7 @@ const getSkillIcon = (skill: string): string => {
     'Kiro': 'https://images.saasworthy.com/tr:w-160,h-0,c-at_max,e-sharpen-1/kiro_51769_logo_1753086501_0boi4.jpeg',
     'Lovable': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ68l5UaflfP4iIhMlzUzn2o3051x_HwxLKg&s',
     'Figma': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg',
-    'Nginx(Basic)': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
+    'Nginx (Basic)': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
     'Git': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
     'VS Code': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg',
     'PyCharm': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg',

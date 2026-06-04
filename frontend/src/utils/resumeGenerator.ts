@@ -191,36 +191,60 @@ export const generateAndDownloadResume = () => {
           </div>
         </section>
 
-        <section>
-          <div class="section-title">Skills</div>
-          <div class="skills-grid">
-            <div class="skill-category">
-              <div class="skill-category-title">Programming Languages</div>
-              <div class="skill-items">Python, C++, Java, JavaScript, TypeScript, PL/SQL</div>
-            </div>
-            <div class="skill-category">
-              <div class="skill-category-title">Frontend</div>
-              <div class="skill-items">React.js, HTML, CSS, Tailwind CSS, Bootstrap</div>
-            </div>
-            <div class="skill-category">
-              <div class="skill-category-title">Backend</div>
-              <div class="skill-items">Node.js, Express.js, MongoDB, REST APIs, JWT, MVC</div>
-            </div>
-            <div class="skill-category">
-              <div class="skill-category-title">Cloud & DevOps</div>
-              <div class="skill-items">Docker, AWS (ECR, ECS, ALB), Nginx</div>
-            </div>
-            <div class="skill-category">
-              <div class="skill-category-title">Tools & IDEs</div>
-              <div class="skill-items">Git, GitHub, VS Code, Postman, Figma</div>
-            </div>
-            <div class="skill-category">
-              <div class="skill-category-title">Systems & Concepts</div>
-              <div class="skill-items">DSA, OOP, Database Systems, AI Algorithms, CRDTs</div>
-            </div>
-          </div>
-        </section>
+       <section>
+  <div class="section-title">Skills</div>
 
+  <div class="skills-grid">
+    <div class="skill-category">
+      <div class="skill-category-title">Programming Languages</div>
+      <div class="skill-items">
+        Python, C++, Java, JavaScript, TypeScript, PL/SQL
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-category-title">Frontend</div>
+      <div class="skill-items">
+        Next.js, React.js, HTML, CSS, Tailwind CSS, Bootstrap
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-category-title">Backend</div>
+      <div class="skill-items">
+        Node.js, Express.js, MongoDB, REST APIs, JWT Authentication, MVC Architecture
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-category-title">Cloud & DevOps</div>
+      <div class="skill-items">
+        Docker, AWS (ECR, ECS, ALB), Nginx
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-category-title">Tools & IDEs</div>
+      <div class="skill-items">
+        Git, GitHub, VS Code, Postman, PyCharm, Cursor, Figma
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-category-title">AI & Modern Tools</div>
+      <div class="skill-items">
+        Gen-AI, GitHub Copilot, WebContainer, Kiro, Lovable, Antigravity
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <div class="skill-category-title">Systems & Concepts</div>
+      <div class="skill-items">
+        DSA, OOP, Database Systems, AI Algorithms, CRDTs
+      </div>
+    </div>
+  </div>
+</section>
         <section>
           <div class="section-title">Experience & Projects</div>
           

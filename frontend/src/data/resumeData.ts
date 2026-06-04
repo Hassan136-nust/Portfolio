@@ -12,12 +12,45 @@ export const profileData = {
     linkedin: 'https://www.linkedin.com/in/hassan-jamal-a92191324/',
     twitter: 'https://twitter.com/'
   },
-  skills: {
-    languages: ['Python', 'C++', 'Java', 'JavaScript', 'TypeScript', 'PL/SQL'],
-    frontend: ['React.js', 'HTML', 'CSS', 'Tailwind CSS', 'Bootstrap'],
-    backend: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs', 'JWT Authentication', 'MVC Architecture'],
-    tools: ['Docker', 'AWS','Web Container', 'Cursor','Gen-AI', 'Antigravity', 'GitHub Copilot', 'Kiro', 'Lovable', 'Figma', 'Nginx(Basic)', 'Git', 'VS Code', 'PyCharm', 'Postman']
-  },
+ skills: {
+  languages: ['Python', 'C++', 'Java', 'JavaScript', 'TypeScript', 'PL/SQL'],
+
+  frontend: [
+    'Next.js',
+    'React.js',
+    'HTML',
+    'CSS',
+    'Tailwind CSS',
+    'Bootstrap'
+  ],
+
+  backend: [
+    'Node.js',
+    'Express.js',
+    'MongoDB',
+    'REST APIs',
+    'JWT Authentication',
+    'MVC Architecture'
+  ],
+
+  tools: [
+    'Docker',
+    'AWS',
+    'WebContainer',
+    'Cursor',
+    'Gen-AI',
+    'Antigravity',
+    'GitHub Copilot',
+    'Kiro',
+    'Lovable',
+    'Figma',
+    'Nginx (Basic)',
+    'Git',
+    'VS Code',
+    'PyCharm',
+    'Postman'
+  ]
+},
   experience: [
     {
       id: 1,
