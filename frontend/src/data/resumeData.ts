@@ -54,6 +54,18 @@ export const profileData = {
 
 export const projectsData = [
   {
+  id: 1,
+  title: 'NexRide - Next-Generation AI-Powered Ride-Hailing Platform',
+  description: 'Full-stack SaaS-style vehicle booking platform with partner onboarding system, real-time booking flow, Video KYC verification, admin dashboard, secure authentication, and scalable backend architecture. Includes modern UI, role-based access, and production-ready deployment on Vercel.',
+  technologies: ['Next.js', 'React', 'Node.js', 'MongoDB', 'Express', 'JWT', 'Tailwind CSS', 'Video KYC', 'Stripe Integration'],
+  image: '/images/nexride.png',
+  link: 'https://nexride-hire.vercel.app',
+  github: 'https://github.com/Hassan136-nust/NexRide'
+},
+
+  {
+
+    
     id: 1,
     title: 'FREYA : AI-Powered Collaborative Code Editor',
     description: 'Gen-AI powered collaborative development environment with real-time multi-user editing, in-browser code execution using WebContainers, and AI-assisted code generation via @freya.',

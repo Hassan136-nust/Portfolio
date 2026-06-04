@@ -224,6 +224,20 @@ export const generateAndDownloadResume = () => {
         <section>
           <div class="section-title">Experience & Projects</div>
           
+
+<div class="entry">
+  <div class="entry-header">
+    <div class="entry-title">NexRide – Next-Generation AI-Powered Ride-Hailing Platform</div>
+    <div class="entry-date">2026</div>
+  </div>
+  <div class="entry-subtitle">Next.js + MERN + Scalable SaaS Architecture</div>
+  <ul>
+    <li>Built a full-stack ride-hailing platform with real-time booking flow, partner onboarding system, and role-based authentication for users, drivers, and admins</li>
+    <li>Developed a scalable backend architecture using Node.js, Express, and MongoDB with secure JWT authentication and modular API design for production-ready deployment</li>
+    <li>Designed a modern SaaS-style UI with seamless UX for booking, partner registration, and admin dashboard, deployed on Vercel with optimized performance</li>
+  </ul>
+</div>
+
           <div class="entry">
   <div class="entry-header">
     <div class="entry-title">FREYA – AI-Powered Collaborative Code Editor</div>
