@@ -36,7 +36,7 @@ National University of Sciences and Technology (NUST)
 Python • C++ • Java • JavaScript • TypeScript • PL/SQL
 
 ### Frontend
-React.js • HTML • CSS • Tailwind CSS • Bootstrap • Three.js
+Next.js •React.js • HTML • CSS • Tailwind CSS • Bootstrap • Three.js
 
 ### Backend
 Node.js • Express.js • MongoDB • REST APIs • JWT • WebSockets • Socket.IO
