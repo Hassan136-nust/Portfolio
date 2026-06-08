@@ -24,7 +24,7 @@ National University of Sciences and Technology (NUST)
 
 - **Full-Stack Development:** MERN Stack, REST APIs, Real-Time Systems
 - **AI Integration:** Gen-AI/LLM (Groq, Gemini), AI-Powered Applications
-- **Cloud & DevOps:** Docker, AWS (ECR, ECS, ALB), Nginx
+- **Cloud & DevOps:** Docker, AWS (ECR, ECS), Nginx
 - **Real-Time Systems:** WebSockets, Socket.IO, CRDTs
 - **Collaborative Tools:** Multi-user code editors, real-time synchronization
 
