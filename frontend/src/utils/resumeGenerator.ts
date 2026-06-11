@@ -226,7 +226,7 @@ export const generateAndDownloadResume = () => {
     <div class="skill-category">
       <div class="skill-category-title">Tools & IDEs</div>
       <div class="skill-items">
-        Git, GitHub, VS Code, Postman, PyCharm, Cursor, Figma
+        Git, GitHub, Postman, Cursor, Figma
       </div>
     </div>
 
