@@ -46,8 +46,6 @@ export const profileData = {
     'Figma',
     'Nginx (Basic)',
     'Git',
-    'VS Code',
-    'PyCharm',
     'Postman'
   ]
 },
