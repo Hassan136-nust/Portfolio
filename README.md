@@ -132,7 +132,7 @@ This portfolio website includes:
 - **Frontend:** React.js + Vite + TypeScript
 - **Styling:** Tailwind CSS + Framer Motion
 - **3D Graphics:** Three.js
-- **AI:** Groq API (Serverless Functions)
+- **AI:** Groq API 
 - **Deployment:** Vercel
 - **UI Components:** Radix UI + shadcn/u
 
