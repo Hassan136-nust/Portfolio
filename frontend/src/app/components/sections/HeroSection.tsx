@@ -103,7 +103,7 @@ export const HeroSection = ({ name, title, profileImage }: HeroSectionProps) => 
              
               <h2 className="text-2xl font-semibold text-foreground">NUST Computer Science</h2>
               <p className="text-sm leading-6 text-muted-foreground">
-                4th semester student specializing in full-stack development, AI-assisted tooling, and immersive 3D web UI.
+                5th semester student specializing in full-stack development, AI-assisted tooling, and immersive 3D web UI.
               </p>
             </div>
             <div className="mt-8 grid gap-3 sm:grid-cols-2">

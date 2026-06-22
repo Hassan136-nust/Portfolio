@@ -187,7 +187,7 @@ export const generateAndDownloadResume = () => {
               <div class="entry-title">National University of Sciences and Technology (NUST)</div>
               <div class="entry-date">2024 – Present</div>
             </div>
-            <div class="entry-subtitle">BS Computer Science — 4th Semester — CGPA: 3.32</div>
+            <div class="entry-subtitle">BS Computer Science — 5th Semester — CGPA: 3.32</div>
           </div>
         </section>
 

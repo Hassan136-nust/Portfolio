@@ -78,7 +78,7 @@ export const profileData = {
       institution: 'National University of Sciences and Technology (NUST)',
       degree: 'BS Computer Science',
       duration: '2024 – Present',
-      description: '4th Semester'
+      description: '5th Semester'
     }
   ]
 };
