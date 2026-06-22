@@ -57,7 +57,7 @@ export const ContactSection = () => {
   const handleDownloadResume = () => {
     // Download the existing resume PDF from public folder
     const link = document.createElement('a');
-    link.href = '/resume.pdf';
+    link.href = '/Hassan_Jamal_Resume.pdf';
     link.download = 'Hassan_Jamal_Resume.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
