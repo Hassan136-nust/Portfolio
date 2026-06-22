@@ -1,6 +1,6 @@
 export const profileData = {
   name: 'Hassan Jamal',
-  title: 'BS Computer Science Student | Full-Stack & AI Enthusiast',
+  title: 'BS Computer Science Student | Full-Stack AI Engineer',
   email: 'hjamal.bscs24seecs@seecs.edu.pk',
   phone: '+923289082754',
   location: 'Islamabad, Pakistan',
