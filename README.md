@@ -12,7 +12,7 @@ A modern, interactive portfolio website showcasing my projects, skills, and expe
 
 **Hassan Jamal**  
 BS Computer Science Student | 5th Semester   
-National University of Sciences and Technology (NUST)
+National University of Sciences and Technology 
 
 📧 hjamal.bscs24seecs@seecs.edu.pk  
 📱 0328-9082754  
